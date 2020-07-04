@@ -1,4 +1,4 @@
-# CodingNomads Java Fundamentals
+# CodingNomads Java Fundamentals - edit
 
 This project contains a variety of textbook examples and labs focused on Java labs_examples.fundamentals.
 
@@ -33,4 +33,4 @@ Install Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ```
 
 ### Sources
-Many of the examples in this project are sourced from O'Reilly Media and are available free for download [here](https://www.mhprofessional.com/9781259589317-usa-java-a-beginners-guide-seventh-edition-group).
+Many of the examples in this project arE sourced from O'Reilly Media and are available free for download [here](https://www.mhprofessional.com/9781259589317-usa-java-a-beginners-guide-seventh-edition-group).
