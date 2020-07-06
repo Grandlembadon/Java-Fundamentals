@@ -19,7 +19,7 @@ public class Exercise_03 {
 
         int i = 10;
         int x = 12;
-        int z = i + x;
+         int z = i + x;
 
         System.out.println(z);
 
