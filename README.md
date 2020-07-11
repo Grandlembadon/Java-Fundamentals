@@ -1,4 +1,4 @@
-# Beep Bop CodingNomads Java Fundamentals - edit
+# CodingNomads Java Fundamentals - edit
 
 This project contains a variety of textbook examples and labs focused on Java labs_examples.fundamentals.
 
