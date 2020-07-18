@@ -32,3 +32,39 @@ Cloning repository from Github
     3. Create new repository on Github
     4. Add new remote on local machine
     5. Push to new Github repository
+
+Initializing git folder
+    1.Liams-iMac:CodingNomads legrandelembali$ mkdir git_practice
+
+    2.a.Liams-iMac:git_practice legrandelembali$ git init
+
+    2.b.Liams-iMac:git_practice legrandelembali$ touch bingo
+
+    2.c.Liams-iMac:git_practice legrandelembali$ git add bingo
+
+    2.d.Liams-iMac:git_practice legrandelembali$ git commit bingo
+
+    2.e. created repository at https://github.com/Grandlembadon/git_practice
+
+    2.f.Liams-iMac:git_practice legrandelembali$ git remote add Git_Practice https://github.com/Grandlembadon/git_practice
+
+    2.g.Liams-iMac:git_practice legrandelembali$ git push Git_Practice
+
+Adding a Remote
+    1.Created new repository at https://github.com/Grandlembadon/git_practice_2
+
+    2.Liams-iMac:git_practice legrandelembali$ git remote add Git_Practice2 https://github.com/Grandlembadon/git_practice_2
+
+    3.Liams-iMac:git_practice legrandelembali$ git push Git_Practice2
+
+Cloning repository from Github
+    1.https://github.com/kdn251/interviews
+
+    2.Liams-iMac:LiamCoding legrandelembali$ git clone https://github.com/kdn251/interviews
+
+    3.https://github.com/Grandlembadon/Java-Interviews
+
+    4.Liams-iMac:interviews legrandelembali$ git remote add JavaInterviews https://github.com/Grandlembadon/Java-Interviews
+
+    5.Liams-iMac:interviews legrandelembali$ git push JavaInterviews
+
