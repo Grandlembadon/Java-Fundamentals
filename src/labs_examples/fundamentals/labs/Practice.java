@@ -8,6 +8,5 @@ public class Practice {
         System.out.println("The length of String is " + str1.length());
     }
 }
-    String str1 = "Hello String 1!";
-    String str2 = "Hello String 2!";
+
 
