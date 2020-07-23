@@ -21,9 +21,26 @@ package labs_examples.datatypes_operators.labs;
 
 public class Exercise_02 {
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
 
-        // write code here
+        wideningConversion(7);
+        narrowingConversion(7.7);
+        int i = 10;
+        double d = i;
+        System.out.println(d);
 
+        double d2 = 10.5;
+        int i2 = (int) d2;
+       System.out.println(i2);
+    }
+
+    public static void narrowingConversion (double val){
+        int i = (int) val;
+        System.out.println(i);
+    }
+
+    public static void wideningConversion (int val){
+        double d = val;
+        System.out.println(d);
     }
 }
