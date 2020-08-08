@@ -12,6 +12,16 @@ package labs_examples.conditions_loops.labs;
  *              - ie: String vowels = "aeiou";
  *
  */
-
+import java.util.Scanner;
 public class Exercise_07 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String word = scan.nextline();
+        System.out.println("Please enter a word.");
+        String vowels = "aeiou";
+        while(word )
+
+
+
+    }
 }

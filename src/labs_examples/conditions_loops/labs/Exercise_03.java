@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  */
 
-public class Exercise_03 {
+public class [Exercise_03 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a number");
