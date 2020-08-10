@@ -18,8 +18,10 @@ public class Exercise_07 {
         Scanner scan = new Scanner(System.in);
         String word = scan.nextline();
         System.out.println("Please enter a word.");
+        char v1 = word.charAt(2)
         String vowels = "aeiou";
-        while(word )
+        vowels.indexOf(word);
+        while(word = word.charAt(2))
 
 
 
