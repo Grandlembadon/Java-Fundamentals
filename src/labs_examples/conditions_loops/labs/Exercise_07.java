@@ -16,14 +16,19 @@ import java.util.Scanner;
 public class Exercise_07 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String word = scan.nextline();
         System.out.println("Please enter a word.");
-        char v1 = word.charAt(2)
+        String word = scan.next();
         String vowels = "aeiou";
-        vowels.indexOf(word);
-        while(word = word.charAt(2))
-
-
-
+        int i = 0;
+        while (i < word.length()) {
+            if (vowels.indexOf(0) != -1){
+                System.out.println("word" + i);
+            }
+        }
     }
 }
+
+
+
+
+
