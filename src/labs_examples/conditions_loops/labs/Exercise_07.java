@@ -21,8 +21,14 @@ public class Exercise_07 {
         String vowels = "aeiou";
         int i = 0;
         while (i < word.length()) {
-            if (vowels.indexOf(0) != -1){
-                System.out.println("word" + i);
+            int j = 0;
+            while (j < vowels.length()) {
+                if (vowels.charAt(j) == word.charAt(i)) {
+                    i++;
+                    j++;
+                }
+                System.out.println(word + word.charAt(i));
+
             }
         }
     }
