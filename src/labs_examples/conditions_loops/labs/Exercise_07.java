@@ -21,13 +21,12 @@ public class Exercise_07 {
         String vowels = "aeiou";
         int i = 0;
         while (i < word.length()) {
-            int j = 0;
-            while (j < vowels.length()) {
-                if (vowels.charAt(j) == word.charAt(i)) {
-                    i++;
-                    j++;
+            while (i < vowels.length()) {
+                if (vowels.charAt() != word.charAt(1)) {
+                    System.out.println(word + word.charAt(i));
                 }
-                System.out.println(word + word.charAt(i));
+                i++;
+
 
             }
         }
