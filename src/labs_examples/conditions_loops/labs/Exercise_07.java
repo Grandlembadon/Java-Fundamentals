@@ -21,14 +21,15 @@ public class Exercise_07 {
         String vowels = "aeiou";
         int i = 0;
         while (i < word.length()) {
-                if (vowels.contains(word.charAt(i))){
-                    i++;
-                    System.out.println(word + i);
-                }
+            if(vowels.contains(String.valueOf(word.charAt(i)))){
+                return i;
             }
-
+        }
     }
+            return -1;
 }
+
+
 
 
 
