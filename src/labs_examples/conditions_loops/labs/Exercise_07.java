@@ -1,5 +1,6 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
 /**
  * Conditions and Loops Exercise 7: First vowel
  *
@@ -12,20 +13,18 @@ package labs_examples.conditions_loops.labs;
  *              - ie: String vowels = "aeiou";
  *
  */
-import java.util.Scanner;
 public class Exercise_07 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a word.");
-        String word = scan.next();
+        String userInput = scan.next();
         String vowels = "aeiou";
         int i = 0;
-        while (i < word.length()) {
-            if(vowels.contains(String.valueOf(word.charAt(i)))){
-                    System.out.println(word);
-                    System.out.println(word.charAt(i));
-                    break;
-                }
+        while (i < userInput.length()) {
+            if(vowels.indexOf(userInput.charAt(i)) >= 0){
+                System.out.println("The first vowel in " + userInput + " is " + userInput.charAt(i));
+                break;
+            }
             i++;
         }
     }

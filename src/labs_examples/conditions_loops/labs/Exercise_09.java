@@ -14,6 +14,6 @@ public class Exercise_09 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a number.");
         int i = scan.nextInt();
-        for(int c = i; i < 100;)
+//        for(int c = i; i < 100;)
     }
 }
