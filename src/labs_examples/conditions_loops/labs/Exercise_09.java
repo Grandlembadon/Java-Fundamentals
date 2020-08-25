@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 9: break
  *
@@ -8,4 +10,10 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_09 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter a number.");
+        int i = scan.nextInt();
+        for(int c = i; i < 100;)
+    }
 }
