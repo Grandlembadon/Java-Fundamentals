@@ -22,13 +22,14 @@ public class Exercise_07 {
         int i = 0;
         while (i < word.length()) {
             if(vowels.contains(String.valueOf(word.charAt(i)))){
-                return i;
-            }
+                    System.out.println(word);
+                    System.out.println(word.charAt(i));
+                    break;
+                }
+            i++;
         }
     }
-            return -1;
 }
-
 
 
 
