@@ -8,4 +8,12 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_10 {
+    public static void main(String[] args) {
+        for(int i = 0; i < 100; i++){
+            if(i == 20 || i == 50){
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
 }
