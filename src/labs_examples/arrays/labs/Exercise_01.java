@@ -13,10 +13,17 @@ import java.util.Scanner;
 public class Exercise_01 {
     public static void main(String[] args) {
         Scanner numbers = new Scanner(System.in);
+<<<<<<< HEAD
 
         int[] array = new int[10];
         int sum = 0;
         double avg;
+=======
+        System.out.print("Please enter ten numbers: ");
+        int[] array = {numbers.nextInt()};
+        for (int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
+>>>>>>> 27fc2352479eb0241f2e0da19ebcbf70e2dd156b
 
         for (int i = 0; i < 10; i++){
             System.out.println("Please enter a number" + (i + 1) + ":");
