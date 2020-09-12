@@ -14,9 +14,9 @@ public class Exercise_01 {
     public static void main(String[] args) {
         Scanner numbers = new Scanner(System.in);
         System.out.print("Please enter ten numbers: ");
-        int[] array = new int [numbers.nextInt()];
-        int sum = 0;
-        for (int i = 0; i < 10; i++){
+        int[] array = {numbers.nextInt()};
+        for (int i = 0; i < array.length; i++){
+            System.out.println(array[i]);
 
         }
 
