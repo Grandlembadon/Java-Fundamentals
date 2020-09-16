@@ -9,5 +9,19 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        int[][] irreg = {
+                {1, 2},
+                {3, 4, 5}
+        };
+        for (int i = 0; i < irreg.length; i++) {
+
+            for (int j = 0; j < irreg[i].length; j++) {
+                irreg[i][j] = i * j;
+                System.out.println(irreg[i][j] + " - ");
+            }
+            System.out.println();
+        }
+    }
 
 }
