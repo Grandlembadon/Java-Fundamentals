@@ -11,7 +11,7 @@ class Example {
 
         Engine myEngine = new Engine(400);
 
-        Stereo myStereo = new Stereo("Panasonic");
+        Stereo myStereo = new Stereo ("Panasonic");
 
         Car myCar = new Car(myEngine, myStereo, "XTerra", "Blue");
 
