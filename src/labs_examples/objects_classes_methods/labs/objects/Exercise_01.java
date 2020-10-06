@@ -2,6 +2,8 @@ package labs_examples.objects_classes_methods.labs.objects;
 
 import org.omg.IOP.MultipleComponentProfileHelper;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 public class Exercise_01 {
     public static void main(String[] args) {
 
@@ -9,9 +11,23 @@ public class Exercise_01 {
 
         Passengers myPassengers = new Passengers(500);
 
-        Speed MySpeed = new Speed(345);
+        Speed mySpeed = new Speed(345);
 
-        Model MyModel = new Model("Boeing");
+        Model myModel = new Model("Boeing");
+
+        FuelCapacity myCapacity = new FuelCapacity(59651);
+
+        CurrentFuelLevel myFuel = new CurrentFuelLevel(50000);
+
+        Airplane myAirplane = new Airplane(myAirline, myPassengers, myModel, mySpeed, myCapacity, myFuel);
+
+        System.out.println(myAirline.toString());
+        System.out.println(myPassengers.toString());
+        System.out.println(mySpeed.toString());
+        System.out.println(myModel.toString());
+        System.out.println(myCapacity.toString());
+        System.out.println(myFuel.toString());
+        System.out.println(myAirplane.toString());
 
     }
 }
@@ -24,6 +40,12 @@ class AirLine {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "AirLine{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
 
 class Passengers{
@@ -35,6 +57,13 @@ class Passengers{
         this.PassCount = PassCount;
 
     }
+
+    @Override
+    public String toString() {
+        return "Passengers{" +
+                "PassCount=" + PassCount +
+                '}';
+    }
 }
 
 class Speed {
@@ -44,6 +73,13 @@ class Speed {
     public Speed(double MPH){
 
         this.MPH = MPH;
+    }
+
+    @Override
+    public String toString() {
+        return "Speed{" +
+                "MPH=" + MPH +
+                '}';
     }
 }
 
@@ -56,6 +92,12 @@ class Model {
         this.ModelName = ModelName;
     }
 
+    @Override
+    public String toString() {
+        return "Model{" +
+                "ModelName='" + ModelName + '\'' +
+                '}';
+    }
 }
 
 class FuelCapacity {
@@ -67,6 +109,12 @@ class FuelCapacity {
         this.FuelCap = FuelCap;
     }
 
+    @Override
+    public String toString() {
+        return "FuelCapacity{" +
+                "FuelCap=" + FuelCap +
+                '}';
+    }
 }
 
 class CurrentFuelLevel {
@@ -76,6 +124,13 @@ class CurrentFuelLevel {
     public CurrentFuelLevel(double CurrentFuel){
 
         this.CurrentFuel = CurrentFuel;
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentFuelLevel{" +
+                "CurrentFuel=" + CurrentFuel +
+                '}';
     }
 }
 
@@ -107,4 +162,17 @@ class Airplane {
 
         this.currentfuellevel = currentfuellevel;
     }
+
+    @Override
+    public String toString() {
+        return "Airplane{" +
+                "airline=" + airline +
+                ", passengers=" + passengers +
+                ", model=" + model +
+                ", speed=" + speed +
+                ", fuelCapacity=" + fuelCapacity +
+                ", currentfuellevel=" + currentfuellevel +
+                '}';
+    }
 }
+
