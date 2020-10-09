@@ -29,14 +29,25 @@ public class Exercise_01 {
         System.out.println(myFuel.toString());
         System.out.println(myAirplane.toString());
 
+        mySpeed.setMPH(250);
+        double speed = mySpeed.getMPH();
+
     }
 }
 class AirLine {
 
-    String name;
+    private String name;
 
     public AirLine(String name){
 
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -50,12 +61,20 @@ class AirLine {
 
 class Passengers{
 
-    int PassCount;
+    private int PassCount;
 
     public Passengers(int PassCount){
 
         this.PassCount = PassCount;
 
+    }
+
+    public int getPassCount() {
+        return PassCount;
+    }
+
+    public void setPassCount(int passCount) {
+        PassCount = passCount;
     }
 
     @Override
@@ -68,10 +87,18 @@ class Passengers{
 
 class Speed {
 
-    double MPH;
+    private double MPH;
 
     public Speed(double MPH){
 
+        this.MPH = MPH;
+    }
+
+    public double getMPH() {
+        return MPH;
+    }
+
+    public void setMPH(double MPH) {
         this.MPH = MPH;
     }
 
@@ -85,11 +112,19 @@ class Speed {
 
 class Model {
 
-    String ModelName;
+    private String ModelName;
 
     public Model(String ModelName){
 
         this.ModelName = ModelName;
+    }
+
+    public String getModelName() {
+        return ModelName;
+    }
+
+    public void setModelName(String modelName) {
+        ModelName = modelName;
     }
 
     @Override
@@ -102,11 +137,19 @@ class Model {
 
 class FuelCapacity {
 
-    double FuelCap;
+    private double FuelCap;
 
     public FuelCapacity(double FuelCap){
 
         this.FuelCap = FuelCap;
+    }
+
+    public double getFuelCap() {
+        return FuelCap;
+    }
+
+    public void setFuelCap(double fuelCap) {
+        FuelCap = fuelCap;
     }
 
     @Override
@@ -119,11 +162,19 @@ class FuelCapacity {
 
 class CurrentFuelLevel {
 
-    double CurrentFuel;
+    private double CurrentFuel;
 
     public CurrentFuelLevel(double CurrentFuel){
 
         this.CurrentFuel = CurrentFuel;
+    }
+
+    public double getCurrentFuel() {
+        return CurrentFuel;
+    }
+
+    public void setCurrentFuel(double currentFuel) {
+        CurrentFuel = currentFuel;
     }
 
     @Override
