@@ -15,6 +15,13 @@ public class MethodTraining {
 
         int l = largestOf4(1, 2, 4, 5);
         System.out.println(l);
+        int s = consonants("kamehameha");
+        System.out.println("The String has " + s + " consonants.");
+        art();
+        boolean bl = isPrime(5);
+        System.out.println(bl);
+
+
 
     }
 
@@ -50,15 +57,49 @@ public class MethodTraining {
 
         return max;
     }
-    public static String consonants(String a){
-        for(int i =0; i<a.length(); i++) {
-            if(a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i' || a.charAt(i) == 'o' || a.charAt(i) == 'u'}
+    public static int consonants(String a) {
+        int c = 0;
+        int v = 0;
+        for (int i = 0; i < a.length(); i++) {
+            if (a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i'
+                    || a.charAt(i) == 'o' || a.charAt(i) == 'u') {
+                v++;
+            }
+            else if ((a.charAt(i) >= 'a') && a.charAt(i) <= 'z') {
+                c++;
 
-
+            }
         }
+
+        return c;
+    }
+    public static void art() {
+        System.out.println("      ())Crayola())>      ");
+        System.out.println(" <('-'<) ^(^_^)^ (>'-')> ");
+    }
+    public static boolean isPrime(int n)
+    {
+        if (n <= 1)
+            return false;
+
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+    }
+    public static int[] highLow(int[] array){
+        int maxValue = array[0];
+        for(int i=1;i < array.length;i++){
+            if(array[i] > maxValue){
+                maxValue = array[i];
+            }
+        }
+        return maxValue;
 
 
     }
+
     public static class Car {
         String color;
     }
