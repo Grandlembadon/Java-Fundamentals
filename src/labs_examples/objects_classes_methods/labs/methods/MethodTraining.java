@@ -23,13 +23,11 @@ public class MethodTraining {
         boolean bl = isPrime(5);
         System.out.println(bl);
         int[] array = {1, 2, 3, 4, 5};
-        int[] array2 = highLow(array);
-        System.out.println(array2);
+        highLow(array);
         ArrayList<Integer> nums = arrayList(10, 2, 4);
         System.out.println(nums);
         int[] array3 = {1, 2, 3, 4, 5, 6};
-        int[] array4 = reverseArray(array3);
-        System.out.println(array4);
+        reverseArray(array3);
 
 
     }
@@ -100,7 +98,7 @@ public class MethodTraining {
         return true;
     }
 
-    public static int[] highLow(int[] array) {
+    public static void highLow(int[] array) {
         int maxValue = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maxValue) {
@@ -114,7 +112,7 @@ public class MethodTraining {
             }
         }
         int[] array2 = {minValue, maxValue};
-        return array2;
+        System.out.println(array2);
     }
 
     public static ArrayList<Integer> arrayList(int maxNum, int divisor1, int divisor2) {
@@ -129,7 +127,7 @@ public class MethodTraining {
         return nums;
     }
 
-    public static int[] reverseArray(int[] array) {
+    public static void reverseArray(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - i - 1];
@@ -138,10 +136,10 @@ public class MethodTraining {
         }
 
         for (int i : array) {
-            return new int[]{i};
+            System.out.print(i + " ");
 
         }
-        return array;
+
     }
 }
 
