@@ -10,8 +10,17 @@ package labs_examples.objects_classes_methods.labs.methods;
 public class Exercise_04 {
 
     public static void main(String[] args) {
-//        int x = factorial(5);
-//        System.out.println(x);
+        int x = factorial(5);
+        System.out.println(x);
+
+    }
+    public static int factorial(int n){
+        int output;
+        if(n==1){
+            return 1;
+        }
+        output = factorial(n-1) * n;
+        return output;
     }
 
 
