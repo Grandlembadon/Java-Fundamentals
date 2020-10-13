@@ -1,5 +1,7 @@
 package labs_examples.objects_classes_methods.labs.methods;
 
+import java.util.ArrayList;
+
 public class MethodTraining {
     public static void main(String[] args) {
         int i = 4;
@@ -20,10 +22,18 @@ public class MethodTraining {
         art();
         boolean bl = isPrime(5);
         System.out.println(bl);
-
+        int[] array = {1, 2, 3, 4, 5};
+        int[] array2 = highLow(array);
+        System.out.println(array2);
+        ArrayList<Integer> nums = arrayList(10, 2, 4);
+        System.out.println(nums);
+        int[] array3 = {1, 2, 3, 4, 5, 6};
+        int[] array4 = reverseArray(array3);
+        System.out.println(array4);
 
 
     }
+
 
     public int add(int a, int b) {
         return a + b;
@@ -45,7 +55,7 @@ public class MethodTraining {
         c.color = "Red";
     }
 
-    public static int largestOf4(int a, int b, int c, int d){
+    public static int largestOf4(int a, int b, int c, int d) {
         int max = a;
 
         if (b > max)
@@ -57,6 +67,7 @@ public class MethodTraining {
 
         return max;
     }
+
     public static int consonants(String a) {
         int c = 0;
         int v = 0;
@@ -64,8 +75,7 @@ public class MethodTraining {
             if (a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i'
                     || a.charAt(i) == 'o' || a.charAt(i) == 'u') {
                 v++;
-            }
-            else if ((a.charAt(i) >= 'a') && a.charAt(i) <= 'z') {
+            } else if ((a.charAt(i) >= 'a') && a.charAt(i) <= 'z') {
                 c++;
 
             }
@@ -73,12 +83,13 @@ public class MethodTraining {
 
         return c;
     }
+
     public static void art() {
         System.out.println("      ())Crayola())>      ");
         System.out.println(" <('-'<) ^(^_^)^ (>'-')> ");
     }
-    public static boolean isPrime(int n)
-    {
+
+    public static boolean isPrime(int n) {
         if (n <= 1)
             return false;
 
@@ -88,23 +99,57 @@ public class MethodTraining {
 
         return true;
     }
-    public static int[] highLow(int[] array){
+
+    public static int[] highLow(int[] array) {
         int maxValue = array[0];
-        for(int i=1;i < array.length;i++){
-            if(array[i] > maxValue){
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > maxValue) {
                 maxValue = array[i];
             }
         }
-        return maxValue;
-
-
+        int minValue = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < minValue) {
+                minValue = array[i];
+            }
+        }
+        int[] array2 = {minValue, maxValue};
+        return array2;
     }
 
-    public static class Car {
-        String color;
+    public static ArrayList<Integer> arrayList(int maxNum, int divisor1, int divisor2) {
+        ArrayList<Integer> nums = new ArrayList(maxNum);
+        for (int i = 1; i < maxNum; i++) {
+            if (i % divisor1 == 0 && i % divisor2 == 0) {
+                nums.add(i);
+
+            }
+        }
+
+        return nums;
     }
 
+    public static int[] reverseArray(int[] array) {
+        for (int i = 0; i < array.length / 2; i++) {
+            int temp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - 1 - i] = temp;
+
+        }
+
+        for (int i : array) {
+            return new int[]{i};
+
+        }
+        return array;
+    }
 }
+
+
+
+
+
+
 
 
 
