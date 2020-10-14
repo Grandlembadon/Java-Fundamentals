@@ -1,6 +1,7 @@
 package labs_examples.objects_classes_methods.labs.methods;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MethodTraining {
     public static void main(String[] args) {
@@ -112,7 +113,7 @@ public class MethodTraining {
             }
         }
         int[] array2 = {minValue, maxValue};
-        System.out.println(array2);
+        System.out.println(Arrays.toString(array2));
     }
 
     public static ArrayList<Integer> arrayList(int maxNum, int divisor1, int divisor2) {
