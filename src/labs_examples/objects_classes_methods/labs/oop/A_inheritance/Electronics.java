@@ -40,14 +40,11 @@ class VideoGameConsole extends Electronics {
     int Memory;
     String Color;
 
-    public Vi.deoGameConsole(int Memory, String Color){
+    public VideoGameConsole(int Memory, String Color){
         this.Memory = Memory;
         this.Color = Color;
-
     }
-
-
-
+    
     public VideoGameConsole(boolean isWireless, String brand) {
         super(isWireless, brand);
     }
