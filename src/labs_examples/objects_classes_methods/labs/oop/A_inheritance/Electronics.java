@@ -9,6 +9,10 @@ public class Electronics {
         this.brand = brand;
 
     }
+
+    public Electronics() {
+    }
+
     public static int Multiply(int a, int b){
         return a * b;
     }
