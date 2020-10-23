@@ -11,33 +11,6 @@ public class Electronics {
     public Electronics(boolean isWireless, String brand){
         this.isWireless = isWireless;
         this.brand = brand;
-
-    }
-
-    public static int Multiply(int a, int b){
-        return a * b;
-    }
-    public static double Multiply(double a, double b){
-        return a * b;
-    }
-    public static int Multiply(int a, int b, int c){
-        return a * b * c;
-    }
-    public static int Divide(int a, int b){
-        return a / b;
-    }
-    public static double Divide(double a, double b){
-        return a / b;
-
-    }
-    public static int Add(int a, int b){
-        return a + b;
-    }
-    public static int Add(int a, int b, int c, int d){
-        return a + b + c + d;
-    }
-    public static double Add(double a, double b){
-        return a + b;
     }
 
     public boolean isWireless(boolean b) {
@@ -55,69 +28,82 @@ public class Electronics {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    public void start(){
+        System.out.println("Starting Electronics...");
+    }
 }
 class VideoGameConsole extends Electronics {
-    private int Memory;
-    private String Color;
+    private int memory;
+    private String color;
 
     public VideoGameConsole(){
         super();
-        Memory = 0;
-        Color = "";
+        memory = 0;
+        color = "";
     }
-    public VideoGameConsole(boolean isWireless, String brand, int Memory, String Color){
+    public VideoGameConsole(boolean isWireless, String brand, int memory, String color){
         super(isWireless, brand);
-        this.Memory = Memory;
-        this.Color = Color;
+        this.memory = memory;
+        this.color = color;
 
     }
 
     public int getMemory() {
-        return Memory;
+        return memory;
     }
 
     public void setMemory(int memory) {
-        Memory = memory;
+        memory = memory;
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.color = color;
+    }
+
+    public void start(){
+        System.out.println("Starting VideoGameConsole...");
     }
 }
 
 class PlayStation4 extends VideoGameConsole {
-    private boolean PlaysBluRay;
-    private int StorageSize;
+    private boolean playsBluRay;
+    private int storageSize;
 
-    public PlayStation4(){
+    public PlayStation4() {
         super();
-        PlaysBluRay = true;
-        StorageSize = 0;
+        playsBluRay = true;
+        storageSize = 0;
     }
-    public PlayStation4(boolean isWireless, String brand, int Memory, String Color, boolean PlaysBluRay, int StorageSize){
-        super(isWireless, brand, Memory, Color);
-        this.PlaysBluRay = PlaysBluRay;
-        this.StorageSize = StorageSize;
+
+    public PlayStation4(boolean isWireless, int Memory, boolean playsBluRay, int storageSize) {
+        super(isWireless, "Sony", Memory, "Black");
+        this.playsBluRay = playsBluRay;
+        this.storageSize = storageSize;
     }
 
     public boolean isPlaysBluRay() {
-        return PlaysBluRay;
+        return playsBluRay;
     }
 
     public void setPlaysBluRay(boolean playsBluRay) {
-        PlaysBluRay = playsBluRay;
+        this.playsBluRay = playsBluRay;
     }
 
     public int getStorageSize() {
-        return StorageSize;
+        return storageSize;
     }
 
     public void setStorageSize(int storageSize) {
-        StorageSize = storageSize;
+        this.storageSize = storageSize;
+    }
+
+    public void start(){
+        System.out.println("Starting Playstation 4...");
     }
 
 }
