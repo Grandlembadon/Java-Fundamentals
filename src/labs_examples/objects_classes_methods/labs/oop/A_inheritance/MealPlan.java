@@ -3,12 +3,10 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 public class MealPlan {
     private int mealnum;
     private int cost;
-    String[] Ingredients;
+    String[] ingredients;
 
-    public MealPlan(int mealnum, int cost, String[] Ingredients){
-        this.mealnum = mealnum;
-        this.cost = cost;
-        this.Ingredients = Ingredients;
+    public MealPlan(String... ingredients) {
+        this.ingredients = ingredients;
     }
 
     public int getMealnum() {
@@ -28,11 +26,11 @@ public class MealPlan {
     }
 
     public String[] getIngredients() {
-        return Ingredients;
+        return ingredients;
     }
 
     public void setIngredients(String[] ingredients) {
-        Ingredients = ingredients;
+        this.ingredients = ingredients;
     }
 }
 
