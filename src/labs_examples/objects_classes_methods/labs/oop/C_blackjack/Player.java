@@ -5,5 +5,4 @@ public class Player {
     Hand hand;
     int potValue;
 
-    public Player(String name; Hand hand, int potValue)
 }

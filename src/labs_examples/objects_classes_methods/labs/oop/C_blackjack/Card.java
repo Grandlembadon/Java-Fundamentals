@@ -1,40 +1,52 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Card {
-    char suit;
-    int cardValue;
+    char[] suits = {'♠', '♦', '♥', '♣'};
+    String[] cardValues = {"Ace", "King", "Queen", "Jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"};
+    private char mySuit;
+    private String myCardValue;
 
-    public final static char spades = '♠';
-    public final static char diamonds = '♦';
-    public final static char hearts = '♥';
-    public final static char clubs = '♣';
 
-    public Card (int suit, int cardValue){
-        this.suit = suit;
-        this.cardValue = cardValue;
+    public Card(char suit, String cardValue) {
+        this.mySuit = suit;
+        this.myCardValue = cardValue;
     }
 
-    public char getSuit() {
-        return suit;
+    public char getMySuit() {
+        return mySuit;
     }
 
-    public void setSuit(char suit) {
-        this.suit = suit;
-    }
-    public String getSuitAsString(){
-        switch(suit){
-            case spades:
-                return "Spades";
-            case diamonds:
-                return "Diamonds";
-            case hearts:
-                return "Hearts";
-            case clubs:
-                return "Clubs";
-            default:
-                return "??";
-
+    public void setMySuit(char mySuit) {
+        this.mySuit = mySuit;
     }
 
+    public String getMyCardValue() {
+        return myCardValue;
+    }
 
+    public void setMyCardValue(String myCardValue) {
+        this.myCardValue = myCardValue;
+    }
+
+    public char getSuitAsString() {
+        for (char mySuit : suits) {
+            return mySuit;
+        }
+
+        return 0;
+    }
+
+    public String getValueAsString() {
+        for (String myCardValue : cardValues) {
+            return myCardValue;
+        }
+        return null;
+    }
+
+
+    public String toString() {
+    return getValueAsString() + " of " + getSuitAsString();
+    }
 }
+
+
