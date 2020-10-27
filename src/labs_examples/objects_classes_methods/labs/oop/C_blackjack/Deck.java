@@ -1,34 +1,28 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
-
-
 import java.util.ArrayList;
 
-import static labs_examples.objects_classes_methods.labs.oop.C_blackjack.Card.cardValues;
-
 public class Deck {
-    Card[] deck;
-    ArrayList<Integer> usedCards;
+    public static char[] suits = {'♠', '♦', '♥', '♣'};
+    private Card[] deck = new Card[52];
+    private ArrayList<Integer> usedCards;
 
-    public Deck(Card[] cards, ArrayList<Integer> usedCards) {
-        this.deck = cards;
-        this.usedCards = usedCards;
-
-
+    public Deck() {
+        createDeck();
     }
 
     public void createDeck(){
-        deck = new Card[52];
         int cardCt = 0;
         for (char suit = 0; suit <= 3; suit++){
-            for (String value = cardValues[0]; value <= cardValues.length; value++;){
-                deck[cardCt] = new Card(suit, value);
+            for (int i = 1; i <= 13; i++){
+                deck[cardCt] = new Card(suits[suit], i);
                 cardCt++;
 
             }
         }
-
-
     }
 
+    public void deal(Player player){
+
+    }
 }
-}
+
