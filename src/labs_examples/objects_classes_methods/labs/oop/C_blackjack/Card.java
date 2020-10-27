@@ -7,9 +7,9 @@ public class Card {
     private String myCardValue;
 
 
-    public Card(char suit, String cardValue) {
-        this.mySuit = suit;
-        this.myCardValue = cardValue;
+    public Card(char mysuit, String myCardValue) {
+        this.mySuit = mysuit;
+        this.myCardValue = myCardValue;
     }
 
     public char getMySuit() {
