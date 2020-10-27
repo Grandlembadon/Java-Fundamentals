@@ -3,14 +3,23 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 import java.util.ArrayList;
 
 public class Hand {
-    ArrayList<Card> cards;
-    int handValue;
+    private ArrayList<Card> cards = new ArrayList<Card>();
+    private int handValue;
 
-    public void addCard(Card card){
-        this.cards.add(card);
+    public ArrayList<Card> getCards() {
+        return cards;
     }
 
-
-
+    public void setCards(ArrayList<Card> cards) {
+        this.cards = cards;
     }
+
+    public int getHandValue() {
+        return handValue;
+    }
+
+    public void setHandValue(int handValue) {
+        this.handValue = handValue;
+    }
+}
 
