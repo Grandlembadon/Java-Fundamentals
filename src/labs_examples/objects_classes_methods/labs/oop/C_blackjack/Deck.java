@@ -1,5 +1,6 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck {
     public static char[] suits = {'♠', '♦', '♥', '♣'};
@@ -22,6 +23,9 @@ public class Deck {
     }
 
     public void deal(Player player){
+        Random r = new Random();
+        int randomNum = r.nextInt(52);
+
 
     }
 }
