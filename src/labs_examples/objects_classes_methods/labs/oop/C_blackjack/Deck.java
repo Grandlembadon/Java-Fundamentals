@@ -5,7 +5,7 @@ import java.util.Random;
 public class Deck {
     public static char[] suits = {'♠', '♦', '♥', '♣'};
     private Card[] deck = new Card[52];
-    private ArrayList<Integer> usedCards;
+    private ArrayList<Integer> usedCards = new ArrayList<Integer>();
 
     public Deck() {
         createDeck();
@@ -25,6 +25,15 @@ public class Deck {
     public void deal(Player player){
         Random r = new Random();
         int randomNum = r.nextInt(52);
+        int usedCount = 0;
+        for (randomNum = 0; randomNum <= 52; randomNum++){
+            if (randomNum != usedCards)){
+
+            }
+
+        }
+
+
 
 
     }
