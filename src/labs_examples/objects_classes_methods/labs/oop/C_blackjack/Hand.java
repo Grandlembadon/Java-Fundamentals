@@ -21,5 +21,25 @@ public class Hand {
     public void setHandValue(int handValue) {
         this.handValue = handValue;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sB = new StringBuilder();
+
+        for (Card c : cards){
+            sB.append(c.getFaceValue());
+            sB.append(c.getSuit());
+            sB.append(" ");
+        }
+        return sB.toString();
+    }
+
+    public int getScore(){
+        int score = 0;
+        for (Card c : cards){
+            score += c.getPointValue();
+        }
+        return score;
+    }
 }
 
