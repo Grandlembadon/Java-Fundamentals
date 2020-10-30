@@ -34,6 +34,10 @@ public class Card {
             return "King";
     }
 
+    @Override
+    public String toString() {
+        return String.valueOf(value) + suit;
+    }
 }
 
 

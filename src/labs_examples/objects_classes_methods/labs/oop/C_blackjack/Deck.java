@@ -24,17 +24,14 @@ public class Deck {
 
     public void deal(Player player){
         Random r = new Random();
-        int randomNum = r.nextInt(52);
-        int usedCount = 0;
-        for (randomNum = 0; randomNum <= 52; randomNum++){
-            if (randomNum != usedCards)){
+        int randomNum;
 
-            }
+        do {
+            randomNum = r.nextInt(52);
+        } while (usedCards.contains(randomNum));
 
-        }
-
-
-
+        usedCards.add(randomNum);
+        player.getHand().getCards().add(deck[randomNum]);
 
     }
 }

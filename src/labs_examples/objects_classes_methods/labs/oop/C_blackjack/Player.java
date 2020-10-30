@@ -5,6 +5,10 @@ public class Player {
     private Hand hand;
     private int potValue;
 
+    public Player(){
+        hand = new Hand();
+    }
+
     public String getName() {
         return name;
     }
