@@ -41,12 +41,14 @@ public class Hand {
         }
         return score;
     }
-    public boolean bust(int handValue){
-        if (handValue > 21)
+    public boolean bust(int score){
+        if (score > 21){
+            System.out.println("The player has busted!");
             return true;
-        else (return false)
+        }
 
         return false;
     }
+
 }
 
