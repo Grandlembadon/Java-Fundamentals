@@ -41,5 +41,12 @@ public class Hand {
         }
         return score;
     }
+    public boolean bust(int handValue){
+        if (handValue > 21)
+            return true;
+        else (return false)
+
+        return false;
+    }
 }
 
