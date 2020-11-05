@@ -30,7 +30,11 @@ public class BlackjackController {
         }
 
         System.out.println("Your cards are " + user.getHand().toString() + " and your score is " + user.getHand().getScore());
-        System.out.println("The dealer has " + computer.getHand().toString() + " and the computer' score is " + computer.getHand().getScore());
+        System.out.println("The dealer has " + computer.getHand().toString() + " and the computer's score is " + computer.getHand().getScore());
+
+        if (user.getHand().getScore().bust){
+
+        }
 
     }
 }
