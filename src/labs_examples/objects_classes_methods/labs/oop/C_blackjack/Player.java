@@ -32,4 +32,7 @@ public class Player {
     public void setPotValue(int potValue) {
         this.potValue = potValue;
     }
+
+    public boolean computerAI
 }
+
