@@ -43,7 +43,7 @@ public class Hand {
     }
     public boolean bust(int score){
         if (score > 21){
-            System.out.println("The player has busted!");
+            System.out.println("Bust!");
             return true;
         }
 
