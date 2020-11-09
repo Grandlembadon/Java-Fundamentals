@@ -5,7 +5,8 @@ public class Player {
     private Hand hand;
     private int potValue;
 
-    public Player(){
+
+    public Player() {
         hand = new Hand();
     }
 
@@ -33,6 +34,13 @@ public class Player {
         this.potValue = potValue;
     }
 
-    public boolean computerAI
+    public boolean computerAI(int score) {
+        Player computer = new Player();
+        if (computer.getHand().getScore() < 16) {
+            return true;
+        }
+        return false;
+    }
+
 }
 
