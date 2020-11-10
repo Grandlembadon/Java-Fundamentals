@@ -4,78 +4,94 @@ import java.util.Scanner;
 
 public class BlackjackController {
     public static void main(String[] args) {
-        playBlackJack();
+        BlackjackController controller = new BlackjackController();
+        controller.playBlackJack();
+        controller.playAgain();
 
     }
-    public static void playBlackJack(){
+    public void playBlackJack(){
         System.out.println("Hello player, please enter your name.");
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.next();
 
-        Player user = new Player();
-        user.setName(playerName);
-
-        Player computer = new Player();
-        String computerName = "Computer";
-        computer.setName(computerName);
+        Player user = new Player(playerName);
+        Player computer = new Player("Computer");
 
         Deck deck = new Deck();
+        System.out.println("Let the game begin.");
 
         deck.deal(user);
         deck.deal(computer);
         deck.deal(user);
         deck.deal(computer);
 
-        System.out.println( user.getName() + " has " + user.getHand().toString() + " and their score is " + user.getHand().getScore());
-        System.out.println( computer.getName() + " has " + computer.getHand().toString() + " and their score is " + computer.getHand().getScore());
+        user.printHand();
+        computer.printHand();
 
-        System.out.println("Would you like another card? y/n");
-        Scanner scanner2 = new Scanner(System.in);
-        String response = scanner2.next();
+        while(user.cont || computer.cont) {
+            if (user.cont) {
+                System.out.println("Would you like another card? y/n");
 
-        if (response.equalsIgnoreCase("y")){
-            deck.deal(user);
+                String response = scanner.next();
+
+                if (response.equalsIgnoreCase("y")) {
+                    deck.deal(user);
+                    user.printHand();
+                    if (user.getHand().bust()){
+                        System.out.println("You have busted!");
+                        user.cont = false;
+                        user.getHand().busted = true;
+                    }
+                }else {
+                    user.cont = false;
+                }
+            }
+            if (computer.cont) {
+                if (computer.computerAI()) {
+                    deck.deal(computer);
+                    computer.printHand();
+                    if (computer.getHand().bust()){
+                        System.out.println("The computer has busted!");
+                        computer.cont = false;
+                        computer.getHand().busted = true;
+                    }
+                } else {
+                    computer.cont = false;
+                    System.out.println("The computer will stay.");
+                }
+
+            }
         }
-        System.out.println( user.getName() + " has " + user.getHand().toString() + " and their score is " + user.getHand().getScore());
-
-        if (computer.computerAI(computer.getHand().getScore()) == true){
-            deck.deal(computer);
+        determineWinner(user, computer);
+    }
+    public void determineWinner(Player user, Player computer){
+        if (user.getHand().busted){
+            System.out.println("The computer has won!");
+            return;
+        } else if (computer.getHand().busted){
+            System.out.println("You have won!");
+            return;
         }
-        System.out.println( computer.getName() + " has " + computer.getHand().toString() + " and their score is " + computer.getHand().getScore());
 
-
-
-//        Deck deck = new Deck();
-//
-//        Player user = new Player();
-//        Player computer = new Player();
-//
-//        deck.deal(user);
-//        deck.deal(computer);
-//        deck.deal(user);
-//        deck.deal(computer);
-//
-//        System.out.println("Your cards are " + user.getHand().toString() + " and your score is " + user.getHand().getScore());
-//        System.out.println("The dealer has " + computer.getHand().toString() + " and the computer' score is " + computer.getHand().getScore());
-//
-//        System.out.println("Would you like another card? y/n");
-//        Scanner scanner = new Scanner(System.in);
-//        String response = scanner.next();
-//
-//        if (response.equalsIgnoreCase("y")){
-//            deck.deal(user);
-//        }
-//
-//        if (computer.getHand().getScore() < 16){
-//            deck.deal(computer);
-//        }
-//
-//        System.out.println("Your cards are " + user.getHand().toString() + " and your score is " + user.getHand().getScore());
-//        System.out.println("The dealer has " + computer.getHand().toString() + " and the computer's score is " + computer.getHand().getScore());
-//
-//        if (user.getHand().getScore().bust() = true){
-//
-//        }
+        if (user.getHand().getScore() > computer.getHand().getScore()){
+            System.out.println("You have won!");
+        } else {
+            System.out.println("The computer has won!");
+        }
 
     }
+    public void playAgain(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like to play again?");
+
+        String response = scanner.next();
+
+        if (response.equalsIgnoreCase("y")){
+            playBlackJack();
+        } else {
+            System.out.println("Thank you for playing, goodbye!");
+            return;
+        }
+    }
+
 }

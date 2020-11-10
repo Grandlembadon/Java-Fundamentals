@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
     private int handValue;
+    boolean busted = false;
 
     public ArrayList<Card> getCards() {
         return cards;
@@ -41,9 +42,9 @@ public class Hand {
         }
         return score;
     }
-    public boolean bust(int score){
-        if (score > 21){
-            System.out.println("Bust!");
+    public boolean bust(){
+        if (getScore() > 21){
+            busted = true;
             return true;
         }
 
