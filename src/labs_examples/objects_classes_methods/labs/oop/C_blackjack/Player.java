@@ -4,9 +4,14 @@ public class Player {
     private String name;
     private Hand hand;
     private int potValue;
-
+    boolean cont = true;
 
     public Player() {
+        hand = new Hand();
+    }
+
+    public Player(String name){
+        this.name = name;
         hand = new Hand();
     }
 
@@ -34,12 +39,15 @@ public class Player {
         this.potValue = potValue;
     }
 
-    public boolean computerAI(int score) {
-        Player computer = new Player();
-        if (computer.getHand().getScore() < 16) {
+    public boolean computerAI() {
+        if (hand.getScore() < 16) {
             return true;
         }
         return false;
+    }
+
+    public void printHand(){
+        System.out.println(name + " has " + hand.toString() + " and their score is " + hand.getScore());
     }
 
 }
