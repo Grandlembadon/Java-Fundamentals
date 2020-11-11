@@ -4,7 +4,9 @@ public class Player {
     private String name;
     private Hand hand;
     private int potValue;
+    private int betValue;
     boolean cont = true;
+
 
     public Player() {
         hand = new Hand();
@@ -50,5 +52,18 @@ public class Player {
         System.out.println(name + " has " + hand.toString() + " and their score is " + hand.getScore());
     }
 
+    public int getBetValue() {
+        return betValue;
+    }
+
+    public void setBetValue(int betValue) {
+        this.betValue = betValue;
+    }
+    public boolean checkBetValue(){
+        if (betValue < potValue){
+            return true;
+        }
+        return false;
+    }
 }
 
