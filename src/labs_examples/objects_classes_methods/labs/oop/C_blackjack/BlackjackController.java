@@ -11,6 +11,7 @@ public class BlackjackController {
     }
 
     public void playBlackJack() {
+
         System.out.println("Hello player, please enter your name.");
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.next();
@@ -24,10 +25,11 @@ public class BlackjackController {
 
         System.out.println("How much would you like to bet?");
         int betVal = scanner.nextInt();
-        if (user.checkBetValue()){
+
+        if (betVal < potVal){
             user.setBetValue(betVal);
-        } else {
-            System.out.println("You don't have enough, make a smaller bet!");
+        }else{
+            System.out.println("Your bet is too high, please bet less than your pot value!");
             return;
         }
 
@@ -80,6 +82,7 @@ public class BlackjackController {
             determineWinner(user, computer);
         }
 
+
         public void determineWinner (Player user, Player computer){
             if (user.getHand().busted) {
                 System.out.println("The computer has won!");
@@ -93,7 +96,9 @@ public class BlackjackController {
             }
 
             if (user.getHand().getScore() > computer.getHand().getScore()) {
+                user.winBet();
                 System.out.println("You have won!");
+
             } else {
                 System.out.println("The computer has won!");
             }
