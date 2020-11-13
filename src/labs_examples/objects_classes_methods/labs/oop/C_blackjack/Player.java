@@ -1,5 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
+import java.util.Scanner;
+
 public class Player {
     private String name;
     private Hand hand;
@@ -8,7 +10,7 @@ public class Player {
     boolean cont = true;
 
 
-    public Player() {
+    public Player(){
         hand = new Hand();
     }
 
@@ -35,6 +37,13 @@ public class Player {
 
     public int getPotValue() {
         return potValue;
+    }
+
+    public int winBet(){
+        return (betValue * 2) + potValue;
+    }
+    public void loseBet(){
+
     }
 
     public void setPotValue(int potValue) {
@@ -65,5 +74,6 @@ public class Player {
         }
         return false;
     }
+
 }
 
