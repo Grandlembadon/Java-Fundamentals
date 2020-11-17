@@ -10,11 +10,11 @@ public class Player {
     boolean cont = true;
 
 
-    public Player(){
+    public Player() {
         hand = new Hand();
     }
 
-    public Player(String name){
+    public Player(String name) {
         this.name = name;
         hand = new Hand();
     }
@@ -39,11 +39,12 @@ public class Player {
         return potValue;
     }
 
-    public int winBet(){
-        return (betValue * 2) + potValue;
+    public void winBet() {
+        potValue = betValue * 2 + potValue;
     }
-    public void loseBet(){
 
+    public void loseBet() {
+        potValue = potValue - betValue;
     }
 
     public void setPotValue(int potValue) {
@@ -57,7 +58,7 @@ public class Player {
         return false;
     }
 
-    public void printHand(){
+    public void printHand() {
         System.out.println(name + " has " + hand.toString() + " and their score is " + hand.getScore());
     }
 
@@ -68,12 +69,8 @@ public class Player {
     public void setBetValue(int betValue) {
         this.betValue = betValue;
     }
-    public boolean checkBetValue(){
-        if (betValue < potValue){
-            return true;
-        }
-        return false;
-    }
+
+
 
 }
 
