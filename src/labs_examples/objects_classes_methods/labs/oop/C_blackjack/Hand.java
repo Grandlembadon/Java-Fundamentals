@@ -4,23 +4,10 @@ import java.util.ArrayList;
 
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
-    private int handValue;
     boolean busted = false;
 
     public ArrayList<Card> getCards() {
         return cards;
-    }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
-    }
-
-    public int getHandValue() {
-        return handValue;
-    }
-
-    public void setHandValue(int handValue) {
-        this.handValue = handValue;
     }
 
     @Override
@@ -42,6 +29,7 @@ public class Hand {
         }
         return score;
     }
+
     public boolean bust(){
         if (getScore() > 21){
             busted = true;
@@ -49,6 +37,11 @@ public class Hand {
         }
 
         return false;
+    }
+
+    public void newHand(){
+        cards = new ArrayList<Card>();
+        busted = false;
     }
 
 }
