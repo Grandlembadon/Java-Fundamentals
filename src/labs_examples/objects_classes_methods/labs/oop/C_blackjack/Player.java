@@ -40,11 +40,15 @@ public class Player {
     }
 
     public void winBet() {
-        potValue = betValue * 2 + potValue;
+        potValue = (betValue * 2) + potValue;
     }
 
     public void loseBet() {
         potValue = potValue - betValue;
+    }
+
+    public void staleBet(){
+        potValue = potValue + betValue;
     }
 
     public void setPotValue(int potValue) {

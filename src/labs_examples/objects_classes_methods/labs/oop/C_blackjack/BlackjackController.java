@@ -6,7 +6,6 @@ public class BlackjackController {
     public static void main(String[] args) {
         BlackjackController controller = new BlackjackController();
         controller.playBlackJack();
-        controller.playAgain();
 
     }
 
@@ -26,16 +25,21 @@ public class BlackjackController {
             user.getHand().newHand();
             computer.getHand().newHand();
             handleBets(user, firstGame);
+            user.cont = true;
+            computer.cont = true;
 
 
             Deck deck = new Deck();
             System.out.println("Let the game begin.");
             dealInitialCards(deck, user, computer);
 
-
             while (user.cont || computer.cont) {
                 promptUserPlay(deck, user);
                 promptComputerPlay(deck, computer);
+                while (user.getHand().bust()){
+                    
+                }
+
             }
             determineWinner(user, computer);
 
@@ -51,10 +55,12 @@ public class BlackjackController {
 
         String response = scanner.next();
 
-        if (response.equalsIgnoreCase("y")){
+        if (response.equalsIgnoreCase("y")) {
             return true;
+        } else {
+            System.out.println("Thank you for playing, good bye!");
+            return false;
         }
-        return false;
     }
 
     private void promptComputerPlay(Deck deck, Player computer) {
@@ -66,6 +72,7 @@ public class BlackjackController {
                     System.out.println("The computer has busted!");
                     computer.cont = false;
                     computer.getHand().busted = true;
+
                 }
             } else {
                 computer.cont = false;
@@ -149,28 +156,19 @@ public class BlackjackController {
             if (user.getHand().getScore() > computer.getHand().getScore()) {
                 System.out.println("You have won!");
                 user.winBet();
-            } else {
+            } else if (user.getHand().getScore() < computer.getHand().getScore()){
                 System.out.println("The computer has won!");
                 user.loseBet();
             }
             if (user.getHand().getScore() == computer.getHand().getScore()) {
                 System.out.println("It's a stalemate!");
-                user.setBetValue(0);
+                user.staleBet();
+            }
+            if (user.getPotValue() == 0){
+                System.out.println("You have lost all your money, the game is over!");
+                java.lang.System.exit(0);
             }
         }
-        public void playAgain () {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Would you like to play again? y/n ");
 
-            String response = scanner.next();
-
-            if (response.equalsIgnoreCase("y")) {
-                playBlackJack();
-                playAgain();
-            }
-            if (response.equalsIgnoreCase("n")) {
-                System.out.println("Thank you for playing, goodbye!");
-            }
-        }
 }
 
