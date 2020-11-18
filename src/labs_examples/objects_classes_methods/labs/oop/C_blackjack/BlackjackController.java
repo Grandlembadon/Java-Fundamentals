@@ -36,15 +36,20 @@ public class BlackjackController {
             while (user.cont || computer.cont) {
                 promptUserPlay(deck, user);
                 promptComputerPlay(deck, computer);
-                while (user.getHand().bust()){
-                    
+
                 }
+            if (user.getHand().bust() || computer.getHand().bust()) {
+                determineWinner(user, computer);
+                playAgain = promptPlayAgain();
+                firstGame = false;
+
+            } else {
+                determineWinner(user, computer);
+                playAgain = promptPlayAgain();
+                firstGame = false;
 
             }
-            determineWinner(user, computer);
 
-            playAgain = promptPlayAgain();
-            firstGame = false;
         }
     }
 
@@ -76,9 +81,8 @@ public class BlackjackController {
                 }
             } else {
                 computer.cont = false;
-                System.out.println("The computer will stay.");
-            }
 
+            }
         }
     }
 
