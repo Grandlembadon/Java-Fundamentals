@@ -19,6 +19,7 @@ public class Player {
         hand = new Hand();
     }
 
+
     public String getName() {
         return name;
     }
@@ -55,6 +56,10 @@ public class Player {
         this.potValue = potValue;
     }
 
+    public void printCurrentPot(){
+        System.out.println("You currently have $" + potValue + " left in your cash pot.");
+    }
+
     public boolean computerAI() {
         if (hand.getScore() < 16) {
             return true;
@@ -73,8 +78,6 @@ public class Player {
     public void setBetValue(int betValue) {
         this.betValue = betValue;
     }
-
-
 
 }
 

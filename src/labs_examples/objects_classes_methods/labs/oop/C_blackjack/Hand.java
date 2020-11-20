@@ -22,6 +22,10 @@ public class Hand {
         return sB.toString();
     }
 
+    /**
+     * This method returns the score for a given hand.
+     * @return int total score
+     */
     public int getScore(){
         int score = 0;
         for (Card c : cards){
