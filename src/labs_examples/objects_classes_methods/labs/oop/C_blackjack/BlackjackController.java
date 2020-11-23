@@ -42,8 +42,8 @@ public class BlackjackController {
             dealInitialCards(deck, user, computer);
 
             while (user.cont || computer.cont) {
-                promptUserPlay(deck, user);
-                promptComputerPlay(deck, computer);
+                promptUserPlay(deck, user, computer);
+                promptComputerPlay(deck, user, computer);
 
             }
             determineWinner(user, computer);
@@ -66,6 +66,7 @@ public class BlackjackController {
         Scanner scanner = new Scanner(System.in);
 
         if (user.getPotValue() == 0) {
+            System.out.println("You have lost all your cash, the game is over!");
             return false;
         }
 
@@ -82,25 +83,24 @@ public class BlackjackController {
         }
     }
 
-    private void promptComputerPlay(Deck deck, Player computer) {
+    private void promptComputerPlay(Deck deck, Player computer, Player user) {
         if (computer.cont) {
             if (computer.computerAI()) {
                 deck.deal(computer);
                 computer.printHand();
                 if (computer.getHand().bust()) {
                     System.out.println("The computer has busted!");
+                    user.cont = false;
+
+                } else {
                     computer.cont = false;
-
                 }
-            } else {
-                computer.cont = false;
-
             }
         }
     }
 
 
-    private void promptUserPlay(Deck deck, Player user) {
+    private void promptUserPlay(Deck deck, Player user, Player computer) {
         Scanner scanner = new Scanner(System.in);
         if (user.cont) {
             System.out.println("Would you like another card? y/n");
@@ -112,10 +112,8 @@ public class BlackjackController {
                 user.printHand();
                 if (user.getHand().bust()) {
                     System.out.println("You have busted!");
-                    user.cont = false;
 
                 }
-            } else {
                 user.cont = false;
             }
         }
@@ -160,10 +158,6 @@ public class BlackjackController {
         if (user.getHand().busted && !computer.getHand().bust()) {
             System.out.println("The computer has won!");
             user.loseBet();
-            if (user.getHand().busted && user.getPotValue() == 0) {
-                System.out.println("You have lost all your money, the game is over!");
-                user.cont = false;
-                return;
 
             } else if (computer.getHand().busted && !user.getHand().bust()) {
                 System.out.println("You have won!");
@@ -174,9 +168,8 @@ public class BlackjackController {
                 System.out.println("You and the computer have busted, you both lose!");
                 user.loseBet();
                 return;
-            }
 
-            if (user.getHand().getScore() > computer.getHand().getScore() && !user.getHand().bust()) {
+            } else if (user.getHand().getScore() > computer.getHand().getScore() && !user.getHand().bust()) {
                 System.out.println("You have won!");
                 user.winBet();
                 return;
@@ -185,13 +178,14 @@ public class BlackjackController {
                 System.out.println("The computer has won!");
                 user.loseBet();
                 return;
-            }
-            if (user.getHand().getScore() == computer.getHand().getScore()) {
+
+            } else if (user.getHand().getScore() == computer.getHand().getScore()) {
                 System.out.println("It's a stalemate!");
                 user.staleBet();
                 return;
+
             }
         }
     }
-}
+
 
