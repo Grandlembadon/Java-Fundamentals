@@ -2,6 +2,10 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 import java.util.ArrayList;
 
+/**
+ * Constructs an ArrayList of cards.
+ *
+ */
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
     boolean busted = false;
@@ -34,6 +38,10 @@ public class Hand {
         return score;
     }
 
+    /**
+     * This method returns true if the score given is higher than 21.
+     * @return true if > 21
+     */
     public boolean bust(){
         if (getScore() > 21){
             busted = true;
@@ -43,6 +51,10 @@ public class Hand {
         return false;
     }
 
+    /**
+     * This method returns a new hand with newly populated cards.
+     * @return cards
+     */
     public void newHand(){
         cards = new ArrayList<Card>();
         busted = false;

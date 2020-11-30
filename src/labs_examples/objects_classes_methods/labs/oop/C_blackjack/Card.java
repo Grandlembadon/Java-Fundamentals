@@ -1,5 +1,9 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
+/**
+ * Constructs a Card, which holds a suit and an int.
+ *
+ */
 public class Card {
     private char suit;
     private int value;
@@ -14,6 +18,11 @@ public class Card {
         return suit;
     }
 
+    /**
+     * This method gets the current point value of a player's hand.
+     *
+     * @return point value
+     */
     public int getPointValue() {
         if (value <= 10)
             return value;
@@ -21,6 +30,11 @@ public class Card {
             return 10;
     }
 
+    /**
+     * This method returns the face value of a card.
+     *
+     * @return face value.
+     */
     public String getFaceValue(){
         if (value == 1)
             return "Ace";
