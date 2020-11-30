@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class BlackjackController {
     /**
-     * This is the main method.
+     * This method is the controller of the Blackjack program.
      *
-     * @param args-abc
+     * @param args The controller will take in the playBlackJack method, which ill be used to run
+     *             the Blackjack program.
      */
     public static void main(String[] args) {
         BlackjackController controller = new BlackjackController();
@@ -15,7 +16,7 @@ public class BlackjackController {
     }
 
     /**
-     * This is the playBlackJack method.
+     * This method is used to play a game of Blackjack between a user player and a computer player.
      */
     public void playBlackJack() {
 
@@ -83,6 +84,13 @@ public class BlackjackController {
         }
     }
 
+    /**
+     * This method is used to prompt the computer player's actions based on the initial cards dealt during a game.
+     *
+     * @param deck This is a collection of playing cards.
+     * @param computer This is the computer player.
+     * @param user This is the user player.
+     */
     private void promptComputerPlay(Deck deck, Player computer, Player user) {
         if (computer.cont) {
             if (computer.computerAI()) {
@@ -91,15 +99,24 @@ public class BlackjackController {
                 if (computer.getHand().bust()) {
                     System.out.println("The computer has busted!");
                     user.cont = false;
-
-                } else {
                     computer.cont = false;
+                    computer.getHand().busted = true;
+
                 }
+
+            } else {
+                computer.cont = false;
             }
         }
     }
 
-
+    /**
+     * This method is used to prompt the next play of the user after the initial cards have been dealt.
+     *
+     * @param deck This is a collection of playing cards.
+     * @param user This is the user player.
+     * @param computer This is the computer player.
+     */
     private void promptUserPlay(Deck deck, Player user, Player computer) {
         Scanner scanner = new Scanner(System.in);
         if (user.cont) {
@@ -112,13 +129,24 @@ public class BlackjackController {
                 user.printHand();
                 if (user.getHand().bust()) {
                     System.out.println("You have busted!");
+                    user.cont = false;
+                    computer.cont = false;
+                    user.getHand().busted = true;
 
                 }
+            } else {
                 user.cont = false;
             }
         }
     }
 
+    /**
+     * This method is used to deal the first two cards of the game to the user and the computer.
+     *
+     * @param deck This is a collection of playing cards.
+     * @param user This is the user player.
+     * @param computer This is the computer player.
+     */
     private void dealInitialCards(Deck deck, Player user, Player computer) {
         deck.deal(user);
         deck.deal(computer);
@@ -129,6 +157,13 @@ public class BlackjackController {
         computer.printHand();
     }
 
+    /**
+     * This method is ued to set the initial starting cash pot of the game,
+     *  as well as check the bet of the player during each hand of Blackjack.
+     *
+     * @param user This is the user player.
+     * @param firstGame This is the boolean that signals the first game of Blackjack.
+     */
     private void handleBets(Player user, boolean firstGame) {
         Scanner scanner = new Scanner(System.in);
 
@@ -154,38 +189,44 @@ public class BlackjackController {
     }
 
 
+    /**
+     * This method is used to determine the winner of the Blackjack game.
+     *
+     * @param user This is the user player.
+     * @param computer This is the computer player.
+     */
     public void determineWinner(Player user, Player computer) {
         if (user.getHand().busted && !computer.getHand().bust()) {
             System.out.println("The computer has won!");
             user.loseBet();
 
-            } else if (computer.getHand().busted && !user.getHand().bust()) {
-                System.out.println("You have won!");
-                user.winBet();
-                return;
+        } else if (computer.getHand().busted && !user.getHand().bust()) {
+            System.out.println("You have won!");
+            user.winBet();
+            return;
 
-            } else if (computer.getHand().busted && user.getHand().busted) {
-                System.out.println("You and the computer have busted, you both lose!");
-                user.loseBet();
-                return;
+        } else if (computer.getHand().busted && user.getHand().busted) {
+            System.out.println("You and the computer have busted, you both lose!");
+            user.loseBet();
+            return;
 
-            } else if (user.getHand().getScore() > computer.getHand().getScore() && !user.getHand().bust()) {
-                System.out.println("You have won!");
-                user.winBet();
-                return;
+        } else if (user.getHand().getScore() > computer.getHand().getScore() && !user.getHand().bust()) {
+            System.out.println("You have won!");
+            user.winBet();
+            return;
 
-            } else if (user.getHand().getScore() < computer.getHand().getScore() && !computer.getHand().bust()){
-                System.out.println("The computer has won!");
-                user.loseBet();
-                return;
+        } else if (user.getHand().getScore() < computer.getHand().getScore() && !computer.getHand().bust()) {
+            System.out.println("The computer has won!");
+            user.loseBet();
+            return;
 
-            } else if (user.getHand().getScore() == computer.getHand().getScore()) {
-                System.out.println("It's a stalemate!");
-                user.staleBet();
-                return;
+        } else if (user.getHand().getScore() == computer.getHand().getScore()) {
+            System.out.println("It's a stalemate!");
+            user.staleBet();
+            return;
 
-            }
         }
     }
+}
 
 
