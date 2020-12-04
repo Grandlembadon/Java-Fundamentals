@@ -1,7 +1,11 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * This is the Constructor for the Deck Class.
+ */
 public class Deck {
     public static char[] suits = {'♠', '♦', '♥', '♣'};
     private Card[] deck = new Card[52];
@@ -11,10 +15,15 @@ public class Deck {
         createDeck();
     }
 
-    public void createDeck(){
+    /**
+     * This method is used to create a fully populated deck of cards with their suit and point value.
+     *
+     * @return deck
+     */
+    public void createDeck() {
         int cardCt = 0;
-        for (char suit = 0; suit <= 3; suit++){
-            for (int i = 1; i <= 13; i++){
+        for (char suit = 0; suit <= 3; suit++) {
+            for (int i = 1; i <= 13; i++) {
                 deck[cardCt] = new Card(suits[suit], i);
                 cardCt++;
 
@@ -22,7 +31,12 @@ public class Deck {
         }
     }
 
-    public void deal(Player player){
+    /**
+     * This method is used to deal a random card from a deck of cards and remove it from the deck.
+     *
+     * @param player
+     */
+    public void deal(Player player) {
         Random r = new Random();
         int randomNum;
 

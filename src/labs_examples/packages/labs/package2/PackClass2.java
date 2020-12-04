@@ -6,10 +6,10 @@ public class PackClass2 {
     public void sandwiches(){
         System.out.println("I love sandwiches!");
 
-        PackClass1 obj = new PackClass1;
+        PackClass1 obj = new PackClass1();
         obj.methodWahoo();
     }
-    protected void macAndCheese(){
+    public void macAndCheese(){
         System.out.println("I love Mac and Cheese!");
     }
 }
