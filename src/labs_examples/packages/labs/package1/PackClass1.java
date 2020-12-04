@@ -9,7 +9,7 @@ public class PackClass1 {
         PackClass2 obj = new PackClass2();
         obj.macAndCheese();
     }
-    protected void methodWahoo(){
+    public void methodWahoo(){
         System.out.println("Wahoo!!");
     }
 }

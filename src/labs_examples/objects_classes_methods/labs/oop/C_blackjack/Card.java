@@ -1,8 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 /**
- * Constructs a Card, which holds a suit and an int.
- *
+ * Constructor for a Card, which holds a suit and an int.
  */
 public class Card {
     private char suit;
@@ -35,7 +34,7 @@ public class Card {
      *
      * @return face value.
      */
-    public String getFaceValue(){
+    public String getFaceValue() {
         if (value == 1)
             return "Ace";
         else if (value > 1 && value <= 10)

@@ -19,37 +19,49 @@ public class BlackjackController {
      * This method is used to play a game of Blackjack between a user player and a computer player.
      */
     public void playBlackJack() {
-
+        // This is where the game begins, and the player inputs their name
         System.out.println("Hello player, please enter your name.");
         Scanner scanner = new Scanner(System.in);
         String playerName = scanner.next();
 
+        // user's Player object and Computer's Player object are created
         Player user = new Player(playerName);
         Player computer = new Player("Computer");
+        // setting booleans for playAgain and firstGame to true
         boolean playAgain = true;
         boolean firstGame = true;
 
-
+        // this nested while loop handles the hands, bets, and play of the
+        // players during the initial and subsequent games
         while (playAgain) {
+            // user and computer are dealt hands for game after initial game
             user.getHand().newHand();
             computer.getHand().newHand();
+            // user is prompted for their bet
             handleBets(user, firstGame);
+            // cont booleans set to true to allow the player and user to continue until neither want cards
             user.cont = true;
             computer.cont = true;
 
-
+            // initial deck of cards is created
             Deck deck = new Deck();
+            // The initial game starts and initial cards are dealt
             System.out.println("Let the game begin.");
             dealInitialCards(deck, user, computer);
 
+            // inner while loop that checks the cont boolean of the players to see if they continue
             while (user.cont || computer.cont) {
+                // user is prompted to get more cards or stay
                 promptUserPlay(deck, user, computer);
+                // computer ai is checked to see if computer wants more cards
                 promptComputerPlay(deck, user, computer);
 
             }
+            // the winner of the game is determined
             determineWinner(user, computer);
+            // firstGame boolean set to false after first game has been played
             firstGame = false;
-
+            // playAgain boolean is set to ask the player how they want to continue
             playAgain = promptPlayAgain(user);
         }
 
@@ -87,9 +99,9 @@ public class BlackjackController {
     /**
      * This method is used to prompt the computer player's actions based on the initial cards dealt during a game.
      *
-     * @param deck This is a collection of playing cards.
+     * @param deck     This is a collection of playing cards.
      * @param computer This is the computer player.
-     * @param user This is the user player.
+     * @param user     This is the user player.
      */
     private void promptComputerPlay(Deck deck, Player computer, Player user) {
         if (computer.cont) {
@@ -113,8 +125,8 @@ public class BlackjackController {
     /**
      * This method is used to prompt the next play of the user after the initial cards have been dealt.
      *
-     * @param deck This is a collection of playing cards.
-     * @param user This is the user player.
+     * @param deck     This is a collection of playing cards.
+     * @param user     This is the user player.
      * @param computer This is the computer player.
      */
     private void promptUserPlay(Deck deck, Player user, Player computer) {
@@ -143,8 +155,8 @@ public class BlackjackController {
     /**
      * This method is used to deal the first two cards of the game to the user and the computer.
      *
-     * @param deck This is a collection of playing cards.
-     * @param user This is the user player.
+     * @param deck     This is a collection of playing cards.
+     * @param user     This is the user player.
      * @param computer This is the computer player.
      */
     private void dealInitialCards(Deck deck, Player user, Player computer) {
@@ -159,9 +171,9 @@ public class BlackjackController {
 
     /**
      * This method is ued to set the initial starting cash pot of the game,
-     *  as well as check the bet of the player during each hand of Blackjack.
+     * as well as check the bet of the player during each hand of Blackjack.
      *
-     * @param user This is the user player.
+     * @param user      This is the user player.
      * @param firstGame This is the boolean that signals the first game of Blackjack.
      */
     private void handleBets(Player user, boolean firstGame) {
@@ -192,7 +204,7 @@ public class BlackjackController {
     /**
      * This method is used to determine the winner of the Blackjack game.
      *
-     * @param user This is the user player.
+     * @param user     This is the user player.
      * @param computer This is the computer player.
      */
     public void determineWinner(Player user, Player computer) {
