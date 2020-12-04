@@ -78,15 +78,18 @@ public class BlackjackController {
     private boolean promptPlayAgain(Player user) {
         Scanner scanner = new Scanner(System.in);
 
+        // checks to see if the player has enough cash to keep playing
         if (user.getPotValue() == 0) {
             System.out.println("You have lost all your cash, the game is over!");
             return false;
         }
 
+        // prompts the user to play again
         System.out.println("Would you like to play again? y/n");
 
         String response = scanner.next();
 
+        // p
         if (response.equalsIgnoreCase("y")) {
             user.printCurrentPot();
             return true;
