@@ -22,25 +22,27 @@ class Encryption {
 
         String fileWritePath = "/Users/oblivious_peacemaker/Documents/" +
                 "CodingNomads/labs/online-java-fundamentals/src/labs_examples/input_output/files/char_data_encrypt";
-        try (BufferedReader fin = new BufferedReader(new FileReader(fileReadPath));
+        try (BufferedReader bin = new BufferedReader(new FileReader(fileReadPath));
 
              PrintWriter pout = new PrintWriter(new FileWriter(fileWritePath))) {
 
+
             do {
-                i = fin.read();
+                i = bin.read();
                 if (i != -1)
                     if ((char) i == 'a')
                         i = 'z';
                 pout.write(i);
-            } while (i != -1);
 
+            } while (i != -1);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
+        try(BufferedReader bin2 = new BufferedReader(new FileReader(fileWritePath)){
+            
+        }
     }
 }

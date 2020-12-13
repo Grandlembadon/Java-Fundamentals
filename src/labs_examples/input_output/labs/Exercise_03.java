@@ -1,5 +1,7 @@
 package labs_examples.input_output.labs;
 
+import java.io.*;
+
 /**
  * Input/Output Exercise 3: variety
  *
@@ -9,3 +11,25 @@ package labs_examples.input_output.labs;
  *    4) Demonstrate the use of the DataInputStream and DataOutputStream
  *
  */
+
+class ByteStreams {
+    public static void main(String[] args) {
+
+
+        String fileReadPath = "/Users/oblivious_peacemaker/Documents/CodingNomads/labs/" +
+                "online-java-fundamentals/src/labs_examples/input_output/files/byte_data.txt";
+
+        String fileWritePath = "/Users/oblivious_peacemaker/Documents/CodingNomads/labs/" +
+                "online-java-fundamentals/src/labs_examples/input_output/files/byte_data_copy";
+
+//    try{ BufferedInputStream bin = new BufferedInputStream(new FileInputStream(fileReadPath));
+//
+//        BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream(fileWritePath)){
+//
+//
+//
+//        }
+//
+//}
+    }
+}
