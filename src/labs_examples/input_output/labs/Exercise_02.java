@@ -34,15 +34,15 @@ class Encryption {
                         i = 'z';
                 pout.write(i);
 
+
             } while (i != -1);
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try(BufferedReader bin2 = new BufferedReader(new FileReader(fileWritePath)){
-            
-        }
+
     }
 }
