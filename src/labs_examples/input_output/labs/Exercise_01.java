@@ -20,7 +20,7 @@ class Example {
                     "online-java-fundamentals/src/labs_examples/input_output/files/byte_data.txt");
             bufferedInputStream = new BufferedInputStream(inputStream);
             outputStream = new FileOutputStream("/Users/oblivious_peacemaker/Documents/CodingNomads/labs/" +
-                    "online-java-fundamentals/src/labs_examples/input_output/files/byte_data_copy");
+                    "online-java-fundamentals/src/labs_examples/input_output/files/byte_data_copy.txt");
 
             byte[] buffer = new byte[5];
             int bytesRead = 0;
