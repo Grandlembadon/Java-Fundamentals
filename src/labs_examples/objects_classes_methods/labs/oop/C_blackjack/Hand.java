@@ -3,8 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 import java.util.ArrayList;
 
 /**
- * Constructs an ArrayList of cards.
- *
+ * Constructor for the Hand Class.
  */
 public class Hand {
     private ArrayList<Card> cards = new ArrayList<Card>();
@@ -18,7 +17,7 @@ public class Hand {
     public String toString() {
         StringBuilder sB = new StringBuilder();
 
-        for (Card c : cards){
+        for (Card c : cards) {
             sB.append(c.getFaceValue());
             sB.append(c.getSuit());
             sB.append(" ");
@@ -28,11 +27,12 @@ public class Hand {
 
     /**
      * This method returns the score for a given hand.
+     *
      * @return int total score
      */
-    public int getScore(){
+    public int getScore() {
         int score = 0;
-        for (Card c : cards){
+        for (Card c : cards) {
             score += c.getPointValue();
         }
         return score;
@@ -40,10 +40,11 @@ public class Hand {
 
     /**
      * This method returns true if the score given is higher than 21.
+     *
      * @return true if > 21
      */
-    public boolean bust(){
-        if (getScore() > 21){
+    public boolean bust() {
+        if (getScore() > 21) {
             busted = true;
             return true;
         }
@@ -53,9 +54,10 @@ public class Hand {
 
     /**
      * This method returns a new hand with newly populated cards.
+     *
      * @return cards
      */
-    public void newHand(){
+    public void newHand() {
         cards = new ArrayList<Card>();
         busted = false;
     }

@@ -3,9 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 import java.util.Scanner;
 
 /**
- * Constructs a Player, which holds a name, a hand, a pot value, a bet value,
- * and a boolean to check if the player wishes to continue.
- *
+ * Constructors for the Player Class.
  */
 public class Player {
     private String name;
@@ -49,7 +47,7 @@ public class Player {
         potValue = potValue - betValue;
     }
 
-    public void staleBet(){
+    public void staleBet() {
         potValue = potValue + betValue;
     }
 
@@ -57,9 +55,14 @@ public class Player {
         this.potValue = potValue;
     }
 
-    public void printCurrentPot(){
+    public void printCurrentPot() {
         System.out.println("You currently have $" + potValue + " left in your cash pot.");
     }
+
+    public void setBetValue(int betValue) {
+        this.betValue = betValue;
+    }
+
 
     /**
      * Method that is used to allow the computer player the ability to know when to hit and stay.
@@ -79,10 +82,6 @@ public class Player {
         System.out.println(name + " has " + hand.toString() + " and their score is " + hand.getScore());
     }
 
-
-    public void setBetValue(int betValue) {
-        this.betValue = betValue;
-    }
 
 }
 

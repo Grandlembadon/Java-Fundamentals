@@ -14,7 +14,7 @@ class ShowFile2 {
     {
         int i;
 
-        String filePath = "src/labs_examples/input_output/files/byte_data";
+        String filePath = "src/labs_examples/input_output/files/byte_data.txt";
 
         FileInputStream fin = null;
 
