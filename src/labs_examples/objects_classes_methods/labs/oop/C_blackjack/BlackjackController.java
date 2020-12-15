@@ -6,7 +6,7 @@ public class BlackjackController {
     /**
      * This method is the controller of the Blackjack program.
      *
-     * @param args The controller will take in the playBlackJack method, which ill be used to run
+     * @param args The controller will take in the playBlackJack method, which will be used to run
      *             the Blackjack program.
      */
     public static void main(String[] args) {
