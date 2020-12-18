@@ -49,7 +49,7 @@ class Example {
                     outputStream.close();
                 }
             } catch (IOException exc) {
-                exc.printStackTrace();
+                System.out.println("IO Exception Caught.");
             }
         }
 
