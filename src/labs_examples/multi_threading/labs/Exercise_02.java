@@ -8,6 +8,11 @@ package labs_examples.multi_threading.labs;
 
 class ThreadController {
     public static void main(String[] args) {
+        System.out.println("~~ Main Thread Begin! ~~");
+        MyThread t1 = new MyThread("Thread 1");
+        MyThread t2 = new MyThread("Thread 2");
+        MyThread t3 = new MyThread("Thread 3");
+        System.out.println("~~ Main Thread Complete! ~~");
 
     }
 }
@@ -23,5 +28,13 @@ class MyThread extends Thread {
     @Override
     public void run() {
         System.out.println(getName() + " starting.");
+        try {
+            for(int count = 0; count < 10; count ++){
+                Thread.sleep(500);
+                System.out.println("In " + getName() + ", count is " + count);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
