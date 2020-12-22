@@ -11,12 +11,15 @@ package labs_examples.multi_threading.labs;
 class RunnableInterfaceExcercise {
     public static void main(String[] args) {
         System.out.println("Begin Main Thread");
-        MyRunnable runnable1 = new MyRunnable();
-        Thread thread1 = new Thread(runnable1, "Initiate1");
-        thread1.start();
+        MyRunnable runnable1 = new MyRunnable("High Priority");
+        MyRunnable runnable2 = new MyRunnable("Low Priority");
 
-        Thread thread2 = new Thread(new MyRunnable(), "Initiate2");
-        thread2.start();
+        runnable1.thread.setPriority(Thread.NORM_PRIORITY+5);
+        runnable2.thread.setPriority(Thread.NORM_PRIORITY-4);
+
+        runnable1.thread.start();
+        runnable2.thread.start();
+
 
 
     }
@@ -29,7 +32,7 @@ class MyRunnable implements Runnable {
     public MyRunnable(String name){
         thread = new Thread(this,name);
 
-        thread.start();
+
     }
 
     public MyRunnable() {
