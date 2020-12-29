@@ -50,7 +50,6 @@ class Driver {
         Generics<Integer> ob2 = new Generics(7,8);
         Generics<Double> obj3 = new Generics(20.0, 1000.0);
 
-        ArrayList
 
         String s = obj.getVal1();
         int i = ob2.getVal1();
