@@ -2,8 +2,7 @@ package labs_examples.multi_threading.labs;
 
 class Synch2 {
     public static void main(String[] args) {
-        System.out.println();
-        Sender2 snd = new Sender2();
+        MySender2 snd = new MySender2();
         ThreadedSend2 s1 = new ThreadedSend2("Hello!" , snd);
         ThreadedSend2 s2 = new ThreadedSend2("Goodbye!" , snd);
 
@@ -22,7 +21,9 @@ class Synch2 {
 
 }
 
-class Sender2 {
+
+class MySender2 {
+
     public synchronized void send2(String msg){
         System.out.println("Sending\t" + msg );
         try{
@@ -39,15 +40,20 @@ class Sender2 {
 class ThreadedSend2 extends Thread {
     private String msg;
     private Thread t;
-    Sender2 sender2;
+    MySender2 sender2;
 
-    ThreadedSend2(String m, Sender2 obj) {
-        msg = m;
-        sender2 = obj;
+    ThreadedSend2(String m, MySender2 obj) {
+
+            msg = m;
+            sender2 = obj;
+        }
+
+        public void run () {
+            synchronized(sender2) {
+                // synchronizing the snd object
+                sender2.send2(msg);
+            }
+
+        }
+
     }
-
-    public void run(){
-
-    }
-
-}

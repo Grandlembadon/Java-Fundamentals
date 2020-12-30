@@ -80,7 +80,11 @@ public class BlackjackController {
 
         // checks to see if the player has enough cash to keep playing
         if (user.getPotValue() == 0) {
+<<<<<<< HEAD
             System.out.println("You have lost all your cash, the game is over!");
+=======
+            System.out.println("You are all out of cash, the game is over!");
+>>>>>>> 48e11f97447a86dd7c65be5e8ba1d34311ca2cf9
             return false;
         }
 

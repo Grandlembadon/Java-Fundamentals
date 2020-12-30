@@ -7,8 +7,7 @@ package labs_examples.multi_threading.labs;
  *      2: Demonstrate at least two distinct ways of initiating a Thread using the Runnable you just created
  *
  */
-
-class RunnableInterfaceExcercise {
+class MyRunnableInterface {
     public static void main(String[] args) {
         System.out.println("Begin Main Thread");
         MyRunnable runnable1 = new MyRunnable("High Priority");
@@ -20,7 +19,9 @@ class RunnableInterfaceExcercise {
         runnable1.thread.start();
         runnable2.thread.start();
 
-
+        MyRunnable runnable = new MyRunnable();
+        Thread thread = new Thread(runnable, "Thread 1");
+        thread.start();
 
     }
 }
@@ -50,7 +51,11 @@ class MyRunnable implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         System.out.println(thread.getName() + " terminating.");
+
+        System.out.println(Thread.currentThread().getName() + " terminating.");
+
 
     }
 }
