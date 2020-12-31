@@ -73,11 +73,11 @@ public class Player {
         if (hand.getScore() < 16) {
             return true;
         } else {
-<<<<<<< HEAD
+
             System.out.println("The computer will stay.");
-=======
-            System.out.println("The computer will stay!");
->>>>>>> 48e11f97447a86dd7c65be5e8ba1d34311ca2cf9
+
+
+
             return false;
         }
     }

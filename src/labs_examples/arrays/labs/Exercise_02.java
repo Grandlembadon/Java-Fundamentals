@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  */
 
-public class MyArra {
+class MyArray {
     public static void main(String[] args) {
         Scanner num = new Scanner(System.in);
 
