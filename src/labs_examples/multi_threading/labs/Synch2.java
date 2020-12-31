@@ -1,6 +1,6 @@
 package labs_examples.multi_threading.labs;
 
-class Synch2 {
+class MySynch2 {
     public static void main(String[] args) {
         MySender2 snd = new MySender2();
         ThreadedSend2 s1 = new ThreadedSend2("Hello!" , snd);
