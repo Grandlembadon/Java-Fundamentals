@@ -10,11 +10,11 @@ import java.util.ArrayList;
  *          dynamic usage.
  */
 
-class Generics<T> {
+class MyGenerics<T> {
     private T val1;
     private T val2;
 
-    public Generics(T val1, T val2) {
+    public MyGenerics(T val1, T val2) {
         this.val1 = val1;
         this.val2 = val2;
     }
@@ -46,9 +46,9 @@ class Generics<T> {
 
 class Driver {
     public static void main(String[] args) {
-        Generics<String> obj = new Generics("Hello!","Goodbye!");
-        Generics<Integer> ob2 = new Generics(7,8);
-        Generics<Double> obj3 = new Generics(20.0, 1000.0);
+        MyGenerics<String> obj = new MyGenerics("Hello!","Goodbye!");
+        MyGenerics<Integer> ob2 = new MyGenerics(7,8);
+        MyGenerics<Double> obj3 = new MyGenerics(20.0, 1000.0);
 
 
         String s = obj.getVal1();
