@@ -10,13 +10,13 @@ import java.util.Scanner;
  *
  */
 
-public class Exercise_02 {
+public class MyArra {
     public static void main(String[] args) {
-        Scanner number = new Scanner(System.in);
+        Scanner num = new Scanner(System.in);
 
         int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         System.out.println("Please enter a number between 1-10.");
-        int n = number.nextInt();
+        int n = num.nextInt();
         System.out.println("The index of your number is" + " " + array[n]);
 
     }
