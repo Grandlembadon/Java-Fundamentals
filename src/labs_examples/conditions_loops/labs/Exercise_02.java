@@ -16,10 +16,7 @@ public class Exercise_02 {
 
     public static void main(String[] args) {
 
-        // 1) create scanner (don't forget to import Scanner!)
-        // 2) prompt user
-        // 3) assign input to variable as int
-        // 4) write completed code here
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter a number between 1 and 7");
         int i = scan.nextInt();
