@@ -62,7 +62,7 @@ public class BlackjackController {
             // firstGame boolean set to false after first game has been played
             firstGame = false;
             // playAgain boolean is set to ask the player how they want to continue
-            playAgain = promptPlayAgain(user);
+            playAgain = promptReplay(user);
         }
 
 
@@ -75,7 +75,7 @@ public class BlackjackController {
      * @return boolean true if the user wants to play again, false if the user is out of money
      * or does not want to play again.
      */
-    private boolean promptPlayAgain(Player user) {
+    private boolean promptReplay(Player user) {
         Scanner scanner = new Scanner(System.in);
 
         // checks to see if the player has enough cash to keep playing
