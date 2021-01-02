@@ -1,6 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 
 public class MealPlan {
+    private String name;
     private int mealnum;
     private int cost;
     String[] ingredients;
