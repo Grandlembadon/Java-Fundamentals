@@ -9,7 +9,7 @@ package labs_examples.multi_threading.labs;
  */
 class MyRunnableInterface {
     public static void main(String[] args) {
-        System.out.println("Start Main Thread");
+        System.out.println("Begin Main Thread");
         MyRunnable runnable1 = new MyRunnable("High Priority");
         MyRunnable runnable2 = new MyRunnable("Low Priority");
 
