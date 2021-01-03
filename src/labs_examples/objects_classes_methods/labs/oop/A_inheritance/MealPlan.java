@@ -41,13 +41,21 @@ class Cuisine extends MealPlan {
 
 }
 class Italian extends Cuisine {
-    private String Herbs;
+    public String herbs;
     private String name;
 
 
+    Italian(String herbs, String name) {
+        this.herbs = herbs;
+        this.name = name;
+    }
 }
 
 class FettucinneAlfredo extends Italian {
 
+
+    FettucinneAlfredo(String herbs, String name) {
+        super(herbs, name);
+    }
 }
 
