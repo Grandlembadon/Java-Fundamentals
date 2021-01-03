@@ -45,3 +45,7 @@ class Italian extends Cuisine {
 
 }
 
+class FettucinneAlfredo extends Italian {
+    
+}
+
