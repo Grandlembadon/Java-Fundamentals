@@ -36,17 +36,20 @@ public class Electronics {
 class VideoGameConsole extends Electronics {
     private int memory;
     private String color;
+    private double price;
 
-    public VideoGameConsole(){
+    public VideoGameConsole(double price){
         super();
+        this.price = price;
         memory = 0;
         color = "";
     }
-    public VideoGameConsole(boolean isWireless, String brand, int memory, String color){
+    public VideoGameConsole(boolean isWireless, String brand, int memory, String color, double price){
         super(isWireless, brand);
         this.memory = memory;
         this.color = color;
 
+        this.price = price;
     }
 
     public int getMemory() {
@@ -71,17 +74,18 @@ class VideoGameConsole extends Electronics {
 }
 
 class PlayStation4 extends VideoGameConsole {
+    private static final double price = ;
     private boolean playsBluRay;
     private int storageSize;
 
-    public PlayStation4() {
-        super();
+    public PlayStation4(double price) {
+        super(price);
         playsBluRay = true;
         storageSize = 0;
     }
 
     public PlayStation4(boolean isWireless, int Memory, boolean playsBluRay, int storageSize) {
-        super(isWireless, "Sony", Memory, "Black");
+        super(isWireless, "Sony", Memory, "Black", price);
         this.playsBluRay = playsBluRay;
         this.storageSize = storageSize;
     }
