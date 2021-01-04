@@ -4,6 +4,7 @@ public class BabySupplies {
 }
 class Diapers extends BabySupplies {
     int totalDumpCapacity;
+    String name;
 
 }
 class Pampers extends Diapers {
