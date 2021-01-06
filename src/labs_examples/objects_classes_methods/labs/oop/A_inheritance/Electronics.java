@@ -111,3 +111,6 @@ class PlayStation4 extends VideoGameConsole {
     }
 
 }
+class Microwave {
+    
+}
