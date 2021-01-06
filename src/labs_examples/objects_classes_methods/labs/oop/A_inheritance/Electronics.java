@@ -74,7 +74,7 @@ class VideoGameConsole extends Electronics {
 }
 
 class PlayStation4 extends VideoGameConsole {
-    private static final double price = ;
+    private static final double price = 0;
     private boolean playsBluRay;
     private int storageSize;
 
