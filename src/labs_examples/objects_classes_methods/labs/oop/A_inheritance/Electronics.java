@@ -115,5 +115,9 @@ class Microwave {
 
 }
 class SmartTV {
+
+}
+
+class Toaster {
     
 }
