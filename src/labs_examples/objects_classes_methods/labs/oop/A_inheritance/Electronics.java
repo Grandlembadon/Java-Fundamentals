@@ -121,3 +121,7 @@ class SmartTV {
 class Toaster {
     
 }
+
+class InstantPot {
+    
+}
