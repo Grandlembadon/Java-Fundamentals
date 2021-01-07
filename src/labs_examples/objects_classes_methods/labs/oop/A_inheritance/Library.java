@@ -7,6 +7,10 @@ class Book extends Library {
 }
 
 class Genres extends Book {
+    public Genres(String name) {
+        this.name = name;
+    }
+
     String name;
 
 
@@ -14,4 +18,7 @@ class Genres extends Book {
 
 class ScienceFiction extends Genres {
 
+    public ScienceFiction(String name) {
+        super(name);
+    }
 }
