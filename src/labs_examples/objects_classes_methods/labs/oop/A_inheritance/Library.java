@@ -4,6 +4,7 @@ public class Library {
 }
 
 class Genres extends Library {
+    String name;
 
 }
 

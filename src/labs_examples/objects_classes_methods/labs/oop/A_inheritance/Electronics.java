@@ -123,5 +123,5 @@ class Toaster {
 }
 
 class InstantPot {
-    
+
 }
