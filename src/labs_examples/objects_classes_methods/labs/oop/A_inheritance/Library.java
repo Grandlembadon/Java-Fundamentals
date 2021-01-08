@@ -29,6 +29,22 @@ class Fantasy extends Genres {
     int totalchars;
     String settingType;
 
+    public int getTotalchars() {
+        return totalchars;
+    }
+
+    public void setTotalchars(int totalchars) {
+        this.totalchars = totalchars;
+    }
+
+    public String getSettingType() {
+        return settingType;
+    }
+
+    public void setSettingType(String settingType) {
+        this.settingType = settingType;
+    }
+
     public Fantasy(String name) {
         super(name);
     }
