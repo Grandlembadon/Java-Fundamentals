@@ -16,9 +16,9 @@ class Genres extends Book {
 
 }
 
-class ScienceFiction extends Genres {
+class Fantasy extends Genres {
 
-    public ScienceFiction(String name) {
+    public Fantasy(String name) {
         super(name);
     }
 }
