@@ -9,10 +9,14 @@ class Book extends Library {
 
     int pageNum;
 
+    public Book() {
+        
+    }
 }
 
 class Genres extends Book {
     public Genres(String name) {
+        super();
         this.name = name;
     }
 
