@@ -43,7 +43,7 @@ class Cuisine extends MealPlan {
 class Italian extends Cuisine {
     public String herbs;
     private String name;
-    public String meat;
+    private String meat;
 
 
     Italian(String herbs, String name) {

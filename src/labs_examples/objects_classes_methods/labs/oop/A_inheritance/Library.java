@@ -26,6 +26,7 @@ class Genres extends Book {
 }
 
 class Fantasy extends Genres {
+    int totalchars; 
 
     public Fantasy(String name) {
         super(name);
