@@ -3,6 +3,10 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 public class Library {
 }
 class Book extends Library {
+    public Book(int pageNum) {
+        this.pageNum = pageNum;
+    }
+
     int pageNum;
 
 }
