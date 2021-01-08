@@ -10,7 +10,7 @@ class Book extends Library {
     int pageNum;
 
     public Book() {
-        
+
     }
 }
 
