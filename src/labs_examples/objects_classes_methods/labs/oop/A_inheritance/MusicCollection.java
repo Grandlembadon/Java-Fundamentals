@@ -19,4 +19,7 @@ class MP3 extends Format {
     double songLength;
     String songName;
 
+    public MP3(double fileSize) {
+        super(fileSize);
+    }
 }
