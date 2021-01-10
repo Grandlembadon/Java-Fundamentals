@@ -9,5 +9,6 @@ class Format extends MusicCollection {
 
 class MP3 extends Format {
     double songLength;
+    double fileSize;
 
 }
