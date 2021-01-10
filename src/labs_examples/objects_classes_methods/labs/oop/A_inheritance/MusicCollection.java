@@ -10,6 +10,9 @@ public class MusicCollection {
 }
 class Format extends MusicCollection {
 
+    public Format(double fileSize) {
+        super(fileSize);
+    }
 }
 
 class MP3 extends Format {
