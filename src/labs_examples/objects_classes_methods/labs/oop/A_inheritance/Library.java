@@ -28,6 +28,7 @@ class Genres extends Book {
 class Fantasy extends Genres {
     int totalchars;
     String settingType;
+    double price;
 
     public int getTotalchars() {
         return totalchars;
