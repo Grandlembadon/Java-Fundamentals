@@ -22,6 +22,13 @@ class MP3 extends Format {
     }
 
     String artistName;
+
+    public MP3(double fileSize, double songLength, String songName) {
+        super(fileSize);
+        this.songLength = songLength;
+        this.songName = songName;
+    }
+
     double songLength;
     String songName;
 
