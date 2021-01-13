@@ -16,6 +16,11 @@ class Format extends MusicCollection {
 }
 
 class MP3 extends Format {
+    public MP3(double fileSize, String artistName) {
+        super(fileSize);
+        this.artistName = artistName;
+    }
+
     String artistName;
     double songLength;
     String songName;
