@@ -29,6 +29,30 @@ class MP3 extends Format {
         this.songName = songName;
     }
 
+    public String getArtistName() {
+        return artistName;
+    }
+
+    public void setArtistName(String artistName) {
+        this.artistName = artistName;
+    }
+
+    public double getSongLength() {
+        return songLength;
+    }
+
+    public void setSongLength(double songLength) {
+        this.songLength = songLength;
+    }
+
+    public String getSongName() {
+        return songName;
+    }
+
+    public void setSongName(String songName) {
+        this.songName = songName;
+    }
+
     double songLength;
     String songName;
 
