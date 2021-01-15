@@ -23,5 +23,7 @@ class Pampers extends Diapers {
     public void diaperCounter(){
 
     }
-    public void
+    public void diaperChanger() {
+        
+    }
 }
