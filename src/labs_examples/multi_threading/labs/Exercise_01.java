@@ -52,7 +52,7 @@ class MyRunnable implements Runnable {
             e.printStackTrace();
         }
 
-        System.out.println(thread.getName() + " terminating.");
+        System.out.println(thread.getName() + "  now terminating.");
 
         System.out.println(Thread.currentThread().getName() + " terminating.");
 
