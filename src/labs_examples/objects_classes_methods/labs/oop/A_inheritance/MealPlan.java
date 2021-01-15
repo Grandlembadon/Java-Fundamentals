@@ -36,6 +36,7 @@ public class MealPlan {
 }
 
 class Cuisine extends MealPlan {
+    String cuisineType;
 
 
 
@@ -52,7 +53,7 @@ class Italian extends Cuisine {
     }
 
     public void cook () {
-        
+
     }
 }
 
