@@ -51,6 +51,9 @@ class Italian extends Cuisine {
         this.herbs = herbs;
         this.name = name;
     }
+    public void prepare (){
+        
+    }
 
     public void cook () {
 
