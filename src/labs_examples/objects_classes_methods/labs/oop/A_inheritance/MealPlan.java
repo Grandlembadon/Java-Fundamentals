@@ -50,6 +50,10 @@ class Italian extends Cuisine {
         this.herbs = herbs;
         this.name = name;
     }
+
+    public void cook () {
+        
+    }
 }
 
 class FettucinneAlfredo extends Italian {
