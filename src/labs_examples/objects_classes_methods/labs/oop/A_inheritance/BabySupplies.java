@@ -20,4 +20,7 @@ class Pampers extends Diapers {
     public Pampers(int totalDumpCapacity, String name, double price) {
         super(totalDumpCapacity, name, price);
     }
+    public void diaperCounter(){
+
+    }
 }
