@@ -111,18 +111,3 @@ class PlayStation4 extends VideoGameConsole {
     }
 
 }
-class Microwave {
-    String name;
-
-}
-class SmartTV {
-
-}
-
-class Toaster {
-    
-}
-
-class InstantPot {
-
-}
