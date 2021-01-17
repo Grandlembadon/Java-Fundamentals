@@ -57,6 +57,7 @@ class Italian extends Cuisine {
     }
 
     public void cook () {
+        System.out.println("Cooking meal...");
 
     }
 
