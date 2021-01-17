@@ -47,6 +47,10 @@ class Fantasy extends Genres {
 
     }
 
+    public void firstFantasy (){
+        
+    }
+
     public int getTotalchars() {
         return totalchars;
     }
