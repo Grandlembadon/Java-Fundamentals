@@ -22,6 +22,10 @@ class Genres extends Book {
 
     String name;
 
+    public void listAllGenres() {
+
+    }
+
 
 }
 
