@@ -63,8 +63,6 @@ class Italian extends Cuisine {
 class FettucinneAlfredo extends Italian {
 
 
-    FettucinneAlfredo(String herbs, String name) {
-        super(herbs, name);
-    }
+    
 }
 
