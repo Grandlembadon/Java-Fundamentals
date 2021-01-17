@@ -90,6 +90,10 @@ class PlayStation4 extends VideoGameConsole {
         this.storageSize = storageSize;
     }
 
+    public void startPS4 () {
+        System.out.println("Starting PS4...");
+    }
+
     public boolean isPlaysBluRay() {
         return playsBluRay;
     }
