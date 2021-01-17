@@ -38,6 +38,10 @@ class VideoGameConsole extends Electronics {
     private String color;
     private double price;
 
+    public VideoGameConsole() {
+        
+    }
+
     public VideoGameConsole(double price){
         super();
         this.price = price;
