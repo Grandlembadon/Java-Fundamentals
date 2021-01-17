@@ -39,7 +39,7 @@ class VideoGameConsole extends Electronics {
     private double price;
 
     public VideoGameConsole() {
-        
+
     }
 
     public VideoGameConsole(double price){
