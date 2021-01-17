@@ -52,17 +52,21 @@ class Italian extends Cuisine {
         this.name = name;
     }
     public void prepare (){
+        System.out.println("Preparing meal...");
         
     }
 
     public void cook () {
 
     }
+
 }
 
 class FettucinneAlfredo extends Italian {
 
 
-    
+    FettucinneAlfredo(String herbs, String name) {
+        super(herbs, name);
+    }
 }
 
