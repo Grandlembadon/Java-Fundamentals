@@ -32,6 +32,9 @@ class MP3 extends Format {
     public void playMP3() {
         System.out.println("Playing MP3...");
     }
+    public void storeMP3() {
+        System.out.println("Storing MP3...");
+    }
 
     public String getArtistName() {
         return artistName;
