@@ -43,6 +43,9 @@ class Engine {
                 "horsePower=" + horsePower +
                 '}';
     }
+    public void checkEngine() {
+        
+    }
 }
 
 class Stereo {
