@@ -65,7 +65,7 @@ class Stereo {
                 '}';
     }
     public void playRadio() {
-        
+
     }
 }
 
@@ -99,6 +99,9 @@ class Car {
                 ",\n model='" + model + '\'' +
                 ",\n color='" + color + '\'' +
                 '}';
+    }
+    public void startCar() {
+        
     }
 }
 
