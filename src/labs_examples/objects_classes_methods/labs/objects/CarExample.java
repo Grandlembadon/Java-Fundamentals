@@ -44,7 +44,7 @@ class Engine {
                 '}';
     }
     public void checkEngine() {
-        
+
     }
 }
 
@@ -63,6 +63,9 @@ class Stereo {
         return "Stereo{" +
                 "brand='" + brand + '\'' +
                 '}';
+    }
+    public void playRadio() {
+        
     }
 }
 
