@@ -101,6 +101,9 @@ class Car {
                 '}';
     }
     public void startCar() {
+
+    }
+    public void driveCar() {
         
     }
 }
