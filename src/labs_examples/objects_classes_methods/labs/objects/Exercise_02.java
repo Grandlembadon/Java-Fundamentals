@@ -21,6 +21,10 @@ class VideoGame {
     public VideoGame(String name){
         this.name = name;
     }
+
+    public void startGame() {
+        System.out.println("Starting Game...");
+    }
 }
 
 
