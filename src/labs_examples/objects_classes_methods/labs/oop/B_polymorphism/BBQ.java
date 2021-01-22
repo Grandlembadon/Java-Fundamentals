@@ -18,5 +18,11 @@ public class BBQ extends MealPlan implements MealPreparation {
         System.out.println("Wire Brushing BBQ");
 
     }
+    public void cleanWorkStation() {
+        System.out.println("Cleaning work station.");
+    }
+    public void closeWorkStation() {
+        
+    }
 
 }
