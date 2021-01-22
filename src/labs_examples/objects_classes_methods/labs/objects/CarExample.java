@@ -68,6 +68,9 @@ class Stereo {
         System.out.println("Playing Radio...");
 
     }
+    public void changeDiscs() {
+        
+    }
 }
 
 class Car {
