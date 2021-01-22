@@ -69,10 +69,12 @@ class Stereo {
 
     }
     public void changeDiscs() {
+        System.out.println("Changing Discs...");
 
     }
     public void shuffleDiscs() {
-        
+        System.out.println("Shuffling Discs...");
+
     }
 }
 
