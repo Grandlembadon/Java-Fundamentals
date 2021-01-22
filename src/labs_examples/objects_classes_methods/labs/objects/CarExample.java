@@ -121,7 +121,7 @@ class Car {
         System.out.println("Stopping Car..");
     }
     public void accelerate() {
-        System.out.println();
+        System.out.println("Accelerating Car...");
     }
 }
 
