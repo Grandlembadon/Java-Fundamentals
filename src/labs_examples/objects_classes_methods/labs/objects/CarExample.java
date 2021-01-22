@@ -69,6 +69,9 @@ class Stereo {
 
     }
     public void changeDiscs() {
+
+    }
+    public void shuffleDiscs() {
         
     }
 }
