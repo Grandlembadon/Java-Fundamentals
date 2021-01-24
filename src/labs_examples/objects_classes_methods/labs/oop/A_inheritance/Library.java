@@ -33,6 +33,9 @@ class Genres extends Book {
     public void listAllGenres() {
 
     }
+    public void deleteAllGenres() {
+        
+    }
 
 
 }
