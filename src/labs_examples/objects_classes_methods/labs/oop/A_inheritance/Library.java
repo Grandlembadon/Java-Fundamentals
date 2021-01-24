@@ -35,8 +35,10 @@ class Genres extends Book {
 
     }
     public void deleteAllGenres() {
+        System.out.println("Deleting All Genres...");
 
     }
+
 
 
 
