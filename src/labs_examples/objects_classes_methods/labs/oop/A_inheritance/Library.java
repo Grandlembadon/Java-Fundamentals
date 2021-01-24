@@ -12,6 +12,9 @@ class Book extends Library {
     public Book() {
 
     }
+    public void readBook() {
+        
+    }
 }
 
 class Genres extends Book {
