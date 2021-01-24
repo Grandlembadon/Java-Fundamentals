@@ -13,6 +13,9 @@ class Book extends Library {
 
     }
     public void readBook() {
+
+    }
+    public void publishBook() {
         
     }
 }
