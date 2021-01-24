@@ -59,6 +59,7 @@ class Fantasy extends Genres {
     }
 
     public void finalFantasy() {
+        System.out.println("Loading Final Fantasy...");
 
     }
 
