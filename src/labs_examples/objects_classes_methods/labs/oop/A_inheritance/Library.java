@@ -64,6 +64,7 @@ class Fantasy extends Genres {
     }
 
     public void firstFantasy (){
+        System.out.println("Loading First Fantasy...");
 
     }
 
