@@ -67,6 +67,9 @@ class Fantasy extends Genres {
         System.out.println("Loading First Fantasy...");
 
     }
+    public void middleFantasy() {
+        
+    }
 
     public int getTotalchars() {
         return totalchars;
