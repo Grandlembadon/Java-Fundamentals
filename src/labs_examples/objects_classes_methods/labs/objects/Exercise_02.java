@@ -18,6 +18,12 @@ class Person {
 
 class VideoGame {
     String name;
+
+    public VideoGame(String name, String difficulty) {
+        this.name = name;
+        this.difficulty = difficulty;
+    }
+
     String difficulty;
     public VideoGame(String name){
         this.name = name;
