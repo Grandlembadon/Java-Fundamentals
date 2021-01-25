@@ -32,6 +32,10 @@ class VideoGame {
     public void startGame() {
         System.out.println("Starting Game...");
     }
+
+    public void endGame() {
+        System.out.println("Ending Game...");
+    }
 }
 
 
