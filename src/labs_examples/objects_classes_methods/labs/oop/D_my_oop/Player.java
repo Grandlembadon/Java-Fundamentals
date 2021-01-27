@@ -4,6 +4,6 @@ public class Player {
     String [] inventory;
     Weapon weapon;
     Skill [] skills;
-    
+    Class myClass;
 
 }
