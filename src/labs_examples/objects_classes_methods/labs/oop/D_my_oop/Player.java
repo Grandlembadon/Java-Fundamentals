@@ -6,7 +6,7 @@ public class Player {
     Skill [] skills;
     Class myClass;
     int totalHP;
-    
+    int totalSP;
 
 
 }
