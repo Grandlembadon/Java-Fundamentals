@@ -7,6 +7,6 @@ public class Player {
     Class myClass;
     int totalHP;
     int totalSP;
-
-
+    int currentHP;
+    int currentSP;
 }
