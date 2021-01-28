@@ -32,7 +32,6 @@ class ByteStreams {
             int bytesRead = 0;
 
             while ((bytesRead = bin.read(buffer)) != -1){
-                // print out bytes read to console
                 bout.write(bytesRead);
             }
         } catch (FileNotFoundException e) {

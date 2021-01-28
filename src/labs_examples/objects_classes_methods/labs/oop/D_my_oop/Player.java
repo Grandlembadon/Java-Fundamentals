@@ -6,4 +6,5 @@ public class Player {
     Skill [] skills;
     Class myClass;
 
+
 }
