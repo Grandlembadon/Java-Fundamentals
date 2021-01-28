@@ -5,6 +5,8 @@ public class Player {
     Weapon weapon;
     Skill [] skills;
     Class myClass;
+    int totalHP;
+    
 
 
 }
