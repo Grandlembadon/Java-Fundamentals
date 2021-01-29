@@ -14,6 +14,9 @@ public class Player {
 
     }
     public void defend() {
-        
+
+    }
+    public void useSkill() {
+
     }
 }

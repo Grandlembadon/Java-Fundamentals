@@ -7,6 +7,11 @@ public class DungeonBattlerController {
 
     }
     public void playDungeonBattler() {
+        System.out.println("Welcome, brave adventurer. If you seek the riches that lie" +
+                "within this ancient dungeon, speak thy name and enter.");
+
+
 
     }
+
 }
