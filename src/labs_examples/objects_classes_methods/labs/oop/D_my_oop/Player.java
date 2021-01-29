@@ -9,4 +9,11 @@ public class Player {
     int totalSP;
     int currentHP;
     int currentSP;
+
+    public void attack() {
+
+    }
+    public void defend() {
+        
+    }
 }
