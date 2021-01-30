@@ -8,3 +8,4 @@ package labs_examples.enumerations.labs;
  *      of this enum from a seperate class.
  */
 
+public
