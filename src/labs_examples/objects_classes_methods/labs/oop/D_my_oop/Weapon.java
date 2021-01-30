@@ -4,4 +4,8 @@ public class Weapon {
     int [] damageRange;
     String damageType;
     int durability;
+
+    public void strike(){
+        
+    }
 }
