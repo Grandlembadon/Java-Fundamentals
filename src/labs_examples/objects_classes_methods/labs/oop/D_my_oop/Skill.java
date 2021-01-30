@@ -4,4 +4,5 @@ public class Skill {
     int skillCost;
     int [] skillDamageRange;
     int numberOfUses;
+    String skillName;
 }
