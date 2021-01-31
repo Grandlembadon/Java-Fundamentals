@@ -6,6 +6,13 @@ public class Skill {
     int numberOfUses;
     String skillName;
 
+    public Skill(int skillCost, int[] skillDamageRange, int numberOfUses, String skillName) {
+        this.skillCost = skillCost;
+        this.skillDamageRange = skillDamageRange;
+        this.numberOfUses = numberOfUses;
+        this.skillName = skillName;
+    }
+
     public int getSkillCost() {
         return skillCost;
     }
