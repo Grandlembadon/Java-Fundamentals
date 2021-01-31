@@ -19,4 +19,7 @@ public class Player {
     public void useSkill() {
 
     }
+    public void lastResort() {
+        
+    }
 }
