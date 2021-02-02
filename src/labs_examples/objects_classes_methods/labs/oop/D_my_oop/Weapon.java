@@ -20,7 +20,8 @@ public class Weapon {
 
     }
     public void extraAttack(){
-        
+        System.out.println("Double Strike!");
+
     }
 
 
