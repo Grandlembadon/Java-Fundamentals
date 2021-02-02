@@ -6,10 +6,11 @@ public class Weapon {
     int durability;
     int critChance;
 
-    public Weapon(int[] damageRange, String damageType, int durability) {
+    public Weapon(int[] damageRange, String damageType, int durability, int critChance) {
         this.damageRange = damageRange;
         this.damageType = damageType;
         this.durability = durability;
+        this.critChance = critChance;
     }
 
     public void strike(){
