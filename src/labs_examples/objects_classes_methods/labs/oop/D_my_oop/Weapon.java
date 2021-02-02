@@ -19,6 +19,9 @@ public class Weapon {
     public void parry(){
 
     }
+    public void extraAttack(){
+        
+    }
 
 
 }
