@@ -4,6 +4,7 @@ public class Weapon {
     int [] damageRange;
     String damageType;
     int durability;
+    int critChance;
 
     public Weapon(int[] damageRange, String damageType, int durability) {
         this.damageRange = damageRange;
@@ -15,7 +16,8 @@ public class Weapon {
         
     }
     public void parry(){
-        
+
     }
+
 
 }
