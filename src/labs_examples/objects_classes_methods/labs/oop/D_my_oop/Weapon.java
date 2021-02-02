@@ -14,5 +14,8 @@ public class Weapon {
     public void strike(){
         
     }
+    public void parry(){
+        
+    }
 
 }
