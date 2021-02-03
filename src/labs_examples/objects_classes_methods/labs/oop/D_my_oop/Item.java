@@ -6,6 +6,9 @@ public class Item {
     int itemQuantity;
 
     public void useItem(){
+
+    }
+    public void discardItem(){
         
     }
 
