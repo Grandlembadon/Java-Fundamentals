@@ -11,6 +11,7 @@ public class Player {
     int currentSP;
 
     public void attack() {
+        System.out.println("Attacking...");
 
     }
     public void defend() {
