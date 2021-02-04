@@ -13,6 +13,10 @@ public class Weapon {
         this.critChance = critChance;
     }
 
+    public Weapon() {
+
+    }
+
     public void strike(){
         
     }

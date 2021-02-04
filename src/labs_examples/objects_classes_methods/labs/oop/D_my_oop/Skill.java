@@ -13,6 +13,10 @@ public class Skill {
         this.skillName = skillName;
     }
 
+    public Skill() {
+
+    }
+
     public int getSkillCost() {
         return skillCost;
     }
