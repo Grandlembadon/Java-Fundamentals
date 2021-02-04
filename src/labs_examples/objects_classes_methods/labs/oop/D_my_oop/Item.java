@@ -11,15 +11,23 @@ public class Item {
         this.itemQuantity = itemQuantity;
     }
 
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
 
     public void useItem(){
+        System.out.println("Selling Item...");
 
     }
     public void discardItem(){
 
     }
     public void sellItem(){
-        
+
     }
 
 
