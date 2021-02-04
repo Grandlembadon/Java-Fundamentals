@@ -17,6 +17,7 @@ public class Weapon {
         
     }
     public void parry(){
+        System.out.println("You have Parried the enemy attack!");
 
     }
     public void extraAttack(){
