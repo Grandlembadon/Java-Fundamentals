@@ -23,3 +23,43 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+
+@FunctionalInterface
+interface Interface1 {
+
+     void method();
+
+
+}
+
+class Test {
+    public static void main(String[] args) {
+        Interface1 obj = () -> System.out.println("Hello!");
+
+        obj.method();
+
+        Interface1 obj2 = new Interface1() {
+            public void method() {
+                System.out.println("Hi there!");
+
+            }
+        };
+        obj2.method();
+
+        Interface2 obj3 = (int x) -> x + 2;
+        int a = obj3.method2(5);
+        System.out.println(a);
+
+        Interface2 obj4 = new Interface2() {
+            public int method2(int x) {
+            }
+        }
+
+    }
+}
+
+@FunctionalInterface
+interface Interface2 {
+
+    int method2(int x);
+}
