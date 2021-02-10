@@ -59,11 +59,31 @@ class Test {
         int addNumber = obj4.method2(5);
         System.out.println(addNumber);
 
+        Interface3 obj5 = (int x, int y) -> ((x * 2) + (y * 2));
+        int multiNum = obj5.method3(20,30);
+
+        Interface3 obj6 = new Interface3() {
+            @Override
+            public int method3(int x, int y) {
+                return x * y;
+            }
+        };
+        int mult = obj6.method3(9,10);
+        System.out.println(mult);
+
     }
+
+
+
 }
 
 @FunctionalInterface
 interface Interface2 {
 
     int method2(int x);
+}
+
+@FunctionalInterface
+interface Interface3 {
+    int method3(int x, int y);
 }
