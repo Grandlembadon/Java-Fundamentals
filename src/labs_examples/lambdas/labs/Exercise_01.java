@@ -1,5 +1,11 @@
 package labs_examples.lambdas.labs;
 
+import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
 /**
  * Lambdas Exercise 1:
  *
@@ -71,11 +77,24 @@ class Test {
         int mult = obj6.method3(9,10);
         System.out.println(mult);
 
+        Predicate<Integer> pred = x -> (x >= 10);
+        System.out.println(pred.test(99));
+
+        Supplier<String> supp = () -> "Hehe!";
+        System.out.println(supp.get());
+
+
+
     }
 
 
 
+
+
+
 }
+
+
 
 @FunctionalInterface
 interface Interface2 {
