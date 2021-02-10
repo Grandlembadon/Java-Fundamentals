@@ -5,6 +5,7 @@ public enum VideoGame {
     RISKOFRAIN(1,"Expert"),
     MARIO(5,"Easy"),
     THESIMS(1,"Easy"),
+    DIVINIY2(1,"Expert");
 
      VideoGame(int numLives, String difficulty) {
         this.numLives = numLives;
