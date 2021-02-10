@@ -52,8 +52,12 @@ class Test {
 
         Interface2 obj4 = new Interface2() {
             public int method2(int x) {
+                return x + 1;
+
             }
-        }
+        };
+        int addNumber = obj4.method2(5);
+        System.out.println("The addNumber);
 
     }
 }
