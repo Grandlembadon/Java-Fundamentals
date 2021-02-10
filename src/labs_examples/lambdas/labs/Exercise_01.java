@@ -57,7 +57,7 @@ class Test {
             }
         };
         int addNumber = obj4.method2(5);
-        System.out.println("The addNumber);
+        System.out.println(addNumber);
 
     }
 }
