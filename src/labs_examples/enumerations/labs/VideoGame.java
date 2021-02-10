@@ -3,7 +3,8 @@ package labs_examples.enumerations.labs;
 public enum VideoGame {
     MEGAMAN(2, "Very Hard"),
     RISKOFRAIN(1,"Expert"),
-    MARIO(5,"Easy");
+    MARIO(5,"Easy"),
+    THESIMS(1,"Easy"),
 
      VideoGame(int numLives, String difficulty) {
         this.numLives = numLives;
