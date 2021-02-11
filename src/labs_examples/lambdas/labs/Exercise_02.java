@@ -1,8 +1,6 @@
 package labs_examples.lambdas.labs;
 
-import java.util.function.BiConsumer;
-import java.util.function.BooleanSupplier;
-import java.util.function.IntConsumer;
+import java.util.function.*;
 
 /**
  * Lambdas Exercise 2:
@@ -20,7 +18,24 @@ class Test2 {
         BooleanSupplier tf = () -> true;
         System.out.println(tf.getAsBoolean());
 
-        IntConsumer con = ()
+        IntConsumer con = (x) -> System.out.println(x + 50);
+        con.accept(50);
+
+        Function<Integer, Integer> func = x -> x * 2;
+        Integer mult = func.apply(100);
+        System.out.println(mult);
+
+        IntFunction<Integer> iF = x -> x / 10;
+        System.out.println(iF.apply(1000));
+
+        IntPredicate iP = x -> x / 5 == 1;
+        System.out.println(iP.test(5));
+        
+
+
+
+
+
 
     }
 
