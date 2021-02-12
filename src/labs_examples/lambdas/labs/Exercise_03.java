@@ -18,6 +18,10 @@ class Attacks {
 }
 
 class Controller {
-    
+    public static void main(String[] args) {
+        String Attack = "Attack!";
+        Attacks::isAnAttack
+    }
+
 
 }
