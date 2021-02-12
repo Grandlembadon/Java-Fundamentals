@@ -8,3 +8,16 @@ package labs_examples.lambdas.labs;
  *      3) Demonstrate the use of a constructor reference
  *
  */
+
+class Attacks {
+
+    public static boolean isAnAttack(String s){
+        return s.contains("Attack!");
+    }
+
+}
+
+class Controller {
+    
+
+}

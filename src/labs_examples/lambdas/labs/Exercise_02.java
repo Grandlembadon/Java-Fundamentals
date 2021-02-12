@@ -1,5 +1,7 @@
 package labs_examples.lambdas.labs;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.*;
 
 /**
@@ -38,21 +40,34 @@ class Test2 {
                 return false;
             }
         };
-        bP.test(5,4);
+        bP.test(5, 4);
 
-        
+        int a = 5;
+        IntSupplier iS = () -> a * 2;
+        System.out.println("a multiplied by 2 is " + iS.getAsInt());
+
+        Consumer<String> cons = str -> str.length();
+        cons.accept("Hello!");
+
+        List<Integer> arr = Arrays.asList(1, 2, 3, 4);
+        ObjIntConsumer<List<Integer>> ObInCon = (list, numb) -> {
+            list.stream().forEach(x -> System.out.println(x + numb));
+        };
+        ObInCon.accept(arr, 5);
+
+
     }
-
-
-
-
-
-
-
-
-
-
-    }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
