@@ -12,8 +12,8 @@ import java.util.function.*;
 
 class Test2 {
     public static void main(String[] args) {
-        BiConsumer<Integer, Integer> subTwo = (x,y) -> System.out.println(x - y);
-        subTwo.accept(10,2);
+        BiConsumer<Integer, Integer> subTwo = (x, y) -> System.out.println(x - y);
+        subTwo.accept(10, 2);
 
         BooleanSupplier tf = () -> true;
         System.out.println(tf.getAsBoolean());
@@ -30,6 +30,20 @@ class Test2 {
 
         IntPredicate iP = x -> x / 5 == 1;
         System.out.println(iP.test(5));
+
+        BiPredicate<Integer, Integer> bP = (x, y) -> {
+            if (x == y) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        bP.test(5,4);
+
+        
+    }
+
+
 
 
 
