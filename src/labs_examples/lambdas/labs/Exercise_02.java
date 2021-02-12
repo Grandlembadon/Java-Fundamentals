@@ -30,7 +30,8 @@ class Test2 {
 
         IntPredicate iP = x -> x / 5 == 1;
         System.out.println(iP.test(5));
-        
+
+
 
 
 
