@@ -16,11 +16,19 @@ class Attacks {
     }
 
 }
+@FunctionalInterface
+interface Printer {
+    void  method(String s);
+
+}
 
 class Controller {
     public static void main(String[] args) {
-        String Attack = "Attack!";
-        Attacks::isAnAttack
+        //String attack = "Attack!";
+        //Attacks::isAnAttack("Attack!");
+        Printer printer = System.out::println;
+        printer.method("Hello!");
+
     }
 
 
